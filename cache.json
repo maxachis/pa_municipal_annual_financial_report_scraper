@@ -1335,6 +1335,2620 @@
             "2017": true,
             "2016": true,
             "2015": true
+        },
+        "EASTVALE BORO": {
+            "2019": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2018": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2017": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2016": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2015": {
+                "error": "There is no AFR for the parameters you selected."
+            }
+        },
+        "ECONOMY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ELLWOOD CITY BORO": {
+            "2019": {
+                "error": "Timeout while waiting for report to load"
+            },
+            "2018": {
+                "error": "Timeout while waiting for report to load"
+            },
+            "2017": true,
+            "2016": {
+                "error": "Timeout while waiting for report to load"
+            },
+            "2015": true
+        },
+        "FALLSTON BORO": {
+            "2019": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2018": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FRANKFORT SPRINGS BORO": {
+            "2019": {
+                "error": "Timeout while waiting for report to load"
+            },
+            "2018": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2017": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2016": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2015": {
+                "error": "There is no AFR for the parameters you selected."
+            }
+        },
+        "FRANKLIN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FREEDOM BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GEORGETOWN BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GLASGOW BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GREENE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HANOVER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HARMONY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HOMEWOOD BORO": {
+            "2019": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HOOKSTOWN BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HOPEWELL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "INDEPENDENCE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "INDUSTRY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "KOPPEL BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MARION TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MIDLAND BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MONACA BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NEW BRIGHTON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NEW GALILEE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NEW SEWICKLEY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NORTH SEWICKLEY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "OHIOVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PATTERSON HEIGHTS BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PATTERSON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "POTTER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PULASKI TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "RACCOON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ROCHESTER BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ROCHESTER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SHIPPINGPORT BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SOUTH BEAVER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SOUTH HEIGHTS BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "VANPORT TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WEST MAYFIELD BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WHITE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        }
+    },
+    "BUTLER": {
+        "ADAMS TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ALLEGHENY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BRADY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BRUIN BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BUFFALO TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BUTLER CITY": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BUTLER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CALLERY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CENTER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CHERRY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CHERRY VALLEY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CHICORA BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CLAY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CLEARFIELD TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CLINTON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CONCORD TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CONNOQUENESSING BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CONNOQUENESSING TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CRANBERRY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DONEGAL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "EAST BUTLER BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "EAU CLAIRE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "EVANS CITY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FAIRVIEW BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FAIRVIEW TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FORWARD TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FRANKLIN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HARMONY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HARRISVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "JACKSON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "JEFFERSON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "KARNS CITY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "LANCASTER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MARION TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MARS BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MERCER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MIDDLESEX TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MUDDY CREEK TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "OAKLAND TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PARKER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PENN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PETROLIA BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PORTERSVILLE BORO": {
+            "2019": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2018": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2017": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2016": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2015": {
+                "error": "There is no AFR for the parameters you selected."
+            }
+        },
+        "PROSPECT BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SAXONBURG BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SEVEN FIELDS BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SLIPPERY ROCK BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SLIPPERY ROCK TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SUMMIT TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "VALENCIA BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "VENANGO TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WASHINGTON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WEST LIBERTY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WEST SUNBURY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WINFIELD TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WORTH TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ZELIENOPLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        }
+    },
+    "FAYETTE": {
+        "BELLE VERNON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BROWNSVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BROWNSVILLE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BULLSKIN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CONNELLSVILLE CITY": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CONNELLSVILLE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DAWSON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DUNBAR BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DUNBAR TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "EVERSON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FAIRCHANCE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FAYETTE CITY BORO": {
+            "2019": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2018": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2017": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2016": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2015": true
+        },
+        "FRANKLIN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GEORGES TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GERMAN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HENRY CLAY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "JEFFERSON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "LOWER TYRONE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "LUZERNE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MARKLEYSBURG BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MASONTOWN BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MENALLEN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NEWELL BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NICHOLSON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NORTH UNION TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "OHIOPYLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PERRY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PERRYOPOLIS BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "POINT MARION BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "REDSTONE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SALTLICK TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SMITHFIELD BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SOUTH CONNELLSVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SOUTH UNION TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SPRINGFIELD TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SPRINGHILL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "STEWART TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "UNIONTOWN CITY": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "UPPER TYRONE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "VANDERBILT BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WASHINGTON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WHARTON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        }
+    },
+    "GREENE": {
+        "ALEPPO TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CARMICHAELS  BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CENTER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CLARKSVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CUMBERLAND TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DUNKARD TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FRANKLIN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FREEPORT TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GILMORE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GRAY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GREENE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GREENSBORO BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "JACKSON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "JEFFERSON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "JEFFERSON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MONONGAHELA TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MORGAN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MORRIS TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PERRY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "RICES LANDING BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "RICHHILL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SPRINGHILL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WASHINGTON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WAYNE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WAYNESBURG BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WHITELEY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        }
+    },
+    "INDIANA": {
+        "ARMAGH BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ARMSTRONG TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BANKS TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BLACK LICK TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BLAIRSVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BRUSH VALLEY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BUFFINGTON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BURRELL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CANOE TWP": {
+            "2019": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2018": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2017": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2016": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2015": {
+                "error": "There is no AFR for the parameters you selected."
+            }
+        },
+        "CENTER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CHERRY TREE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CHERRYHILL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CLYMER BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CONEMAUGH TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CREEKSIDE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "EAST MAHONING TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "EAST WHEATFIELD TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ERNEST BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GLEN CAMPBELL BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GRANT TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GREEN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HOMER CITY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "INDIANA BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MARION CENTER BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MONTGOMERY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NORTH MAHONING TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PINE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PLUMVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "RAYNE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SALTSBURG BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SHELOCTA BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SMICKSBURG BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SOUTH MAHONING TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WASHINGTON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WEST MAHONING TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WEST WHEATFIELD TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WHITE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "YOUNG TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        }
+    },
+    "LAWRENCE": {
+        "BESSEMER BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ELLPORT BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ELLWOOD CITY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ENON VALLEY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HICKORY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "LITTLE BEAVER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MAHONING TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NESHANNOCK TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NEW BEAVER BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NEW CASTLE CITY": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NEW WILMINGTON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NORTH BEAVER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PERRY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PLAIN GROVE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PULASKI TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SCOTT TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SHENANGO TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SLIPPERY ROCK TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "S.N.P.J. BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SOUTH NEW CASTLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "TAYLOR TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "UNION TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "VOLANT BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WAMPUM BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WASHINGTON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WAYNE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WILMINGTON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        }
+    },
+    "WASHINGTON": {
+        "ALLENPORT BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "AMWELL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BEALLSVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BENTLEYVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BLAINE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BUFFALO TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BURGETTSTOWN BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CALIFORNIA BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CANONSBURG  BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CANTON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CARROLL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CECIL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CENTERVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CHARLEROI BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CHARTIERS TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CLAYSVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "COAL CENTER BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "COKEBURG BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "CROSS CREEK TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DEEMSTON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DONEGAL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DONORA BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DUNLEVY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "EAST BETHLEHEM TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "EAST FINLEY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "EAST WASHINGTON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ELCO BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ELLSWORTH BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FALLOWFIELD TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FINLEYVILLE BORO": {
+            "2019": {
+                "error": "Timeout while waiting for report to load"
+            },
+            "2018": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2017": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2016": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2015": true
+        },
+        "GREEN HILLS BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HANOVER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HOPEWELL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HOUSTON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "INDEPENDENCE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "JEFFERSON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "LONG BRANCH BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MARIANNA BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MCDONALD BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MIDWAY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MONONGAHELA CITY": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MORRIS TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MT PLEASANT TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NEW EAGLE BORO": {
+            "2019": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2018": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NORTH BETHLEHEM TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NORTH CHARLEROI BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NORTH FRANKLIN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NORTH STRABANE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NOTTINGHAM TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PETERS TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ROBINSON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ROSCOE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SMITH TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SOMERSET TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SOUTH FRANKLIN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SOUTH STRABANE TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SPEERS BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "STOCKDALE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "TWILIGHT BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "UNION TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WASHINGTON CITY": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WEST BETHLEHEM TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WEST BROWNSVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WEST FINLEY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WEST MIDDLETOWN BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WEST PIKE RUN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        }
+    },
+    "WESTMORELAND": {
+        "ADAMSBURG BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ALLEGHENY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ARNOLD CITY": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ARONA BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "AVONMORE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BELL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "BOLIVAR BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "COOK TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DELMONT BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DERRY BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DERRY  TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DONEGAL BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "DONEGAL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "EAST HUNTINGDON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "EAST VANDERGRIFT BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "EXPORT BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "FAIRFIELD TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "GREENSBURG CITY": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HEMPFIELD TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HUNKER BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "HYDE PARK BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "IRWIN BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "JEANNETTE CITY": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "LATROBE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "LAUREL MOUNTAIN BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "LIGONIER BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "LIGONIER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "LOWER BURRELL CITY": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "LOYALHANNA TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MADISON BORO": {
+            "2019": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MANOR BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MONESSEN CITY": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MT PLEASANT BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MT PLEASANT TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "MURRYSVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NEW ALEXANDRIA BORO": {
+            "2019": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2018": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2017": {
+                "error": "There is no AFR for the parameters you selected."
+            },
+            "2016": true,
+            "2015": true
+        },
+        "NEW FLORENCE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NEW KENSINGTON CITY": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NEW STANTON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NORTH BELLE VERNON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NORTH HUNTINGDON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "NORTH IRWIN BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "OKLAHOMA BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PENN BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "PENN TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ROSTRAVER TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SALEM TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SCOTTDALE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SEWARD BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SEWICKLEY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SMITHTON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SOUTH GREENSBURG BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SOUTH HUNTINGDON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SOUTHWEST GREENSBURG BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "ST CLAIR TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "SUTERSVILLE BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "TRAFFORD BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "UNITY TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "UPPER BURRELL TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "VANDERGRIFT BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WASHINGTON TWP": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WEST LEECHBURG BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "WEST NEWTON BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "YOUNGSTOWN BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
+        },
+        "YOUNGWOOD BORO": {
+            "2019": true,
+            "2018": true,
+            "2017": true,
+            "2016": true,
+            "2015": true
         }
     }
 }

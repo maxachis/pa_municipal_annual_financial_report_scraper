@@ -1,216 +1,213 @@
 import asyncio
-import json
-from pathlib import Path
+from typing import Optional
 
 from playwright._impl import _errors
 from playwright._impl._errors import Error
 from playwright.async_api import async_playwright
 
-BASE_URL = "https://apps.dced.pa.gov/munstats-public/ReportInformation2.aspx?report=mAfrForm"
-
-COUNTY_SELECT_ID = "ContentPlaceHolder1_ddCountyId"
-MUNI_SELECT_ID = "ContentPlaceHolder1_ddMuniId"
-YEAR_SELECT_ID = "ContentPlaceHolder1_ddYear"
-DISPLAY_REPORT_ID = "ContentPlaceHolder1_btnDisplay"
-
-YEARS = ["2015", "2016", "2017", "2018", "2019"]
-COUNTIES = [
-    "ALLEGHENY",
-    "ARMSTRONG",
-    "BEAVER",
-    "BUTLER",
-    "FAYETTE",
-    "GREENE",
-    "INDIANA",
-    "LAWRENCE",
-    "WESTMORELAND",
-    "WASHINGTON"
-]
-
-class JsonCache:
-    def __init__(self, filename: str):
-        self.filename = filename
-        self.cache = {}
-
-    def add_entry(self, county: str, municipality: str, year: str, data):
-        """Add an entry to the cache."""
-        self.cache.setdefault(county, {}).setdefault(municipality, {})[year] = data
-
-    def has_all_municipality_entries(self, county: str, municipality: str):
-        d = self.cache.get(county, {}).get(municipality)
-        if not d:
-            return False
-        return len(d.keys()) == len(YEARS)
-
-    def get_entry(self, county: str, municipality: str, year: str):
-        """Retrieve an entry from the cache."""
-        return self.cache.get(county, {}).get(municipality, {}).get(year)
-
-    def save_cache(self):
-        """Save the cache to a JSON file."""
-        with open(self.filename, 'w', encoding='utf-8') as f:
-            json.dump(self.cache, f, ensure_ascii=False, indent=4)
-
-    def load_cache(self):
-        """Load the cache from a JSON file."""
-        path = Path(self.filename)
-        if path.exists():
-            with open(self.filename, 'r', encoding='utf-8') as f:
-                self.cache = json.load(f)
-        else:
-            self.cache = {}
+from JsonCache import JsonCache
+from constants import COUNTIES, YEARS, DISPLAY_REPORT_ID, YEAR_SELECT_ID, MUNI_SELECT_ID, COUNTY_SELECT_ID, BASE_URL
+from data_objects import CMY, OptionInfo
+from exceptions import NoAFRException, InvalidOptionException, EntryExistsException
 
 
-async def get_options(page, select_id):
+async def trigger_download(page):
+    # Trigger the download via JavaScript call
+    await page.evaluate("""
+        $find('ctl00_ContentPlaceHolder1_rvReport').exportReport('EXCELOPENXML');
+    """)
+
+async def download_and_save(page, cmy: CMY, additional_attempts: int = 2):
+    async with page.expect_download(timeout=60000) as download_info:
+        print("Waiting for report to download...")
+        for attempts in range(additional_attempts):
+            try:
+                await trigger_download(page)
+                return
+            except Error as e:
+                if "The report or page is being updated" in str(e):
+                    await wait(page)
+                    print("Retrying...")
+                else:
+                    raise
+        # Try one final time, raising if it fails
+        await trigger_download(page)
+
+
+
+    # Get the download object
+    download = await download_info.value
+
+    await save_download(download, cmy)
+
+async def get_option_info(
+        option,
+        valid_labels: Optional[list[str]] = None
+) -> OptionInfo:
+    value = await option.get_attribute("value")
+    if value == "-1":
+        raise InvalidOptionException
+    label = await option.inner_text()
+    if valid_labels is None:
+        return OptionInfo(value=value, label=label)
+    if label not in valid_labels:
+        raise InvalidOptionException
+    return OptionInfo(value=value, label=label)
+
+
+async def wait_for_report(page, cache: JsonCache, cmy: CMY):
+    # Wait for #ctl00_ContentPlaceHolder1_rvReport_ctl05_ctl04_ctl00_ButtonImg to be visible
+    try:
+        print("Waiting for report to load...")
+        await page.wait_for_selector("#ctl00_ContentPlaceHolder1_rvReport_ctl05_ctl04_ctl00_ButtonImg")
+        await wait(page)
+    except _errors.TimeoutError:
+        cache.add_entry(
+            cmy=cmy,
+            data={"error": "Timeout while waiting for report to load"}
+        )
+        raise
+
+
+async def wait_for_loading(page, cache: JsonCache, cmy: CMY):
+    # Wait the value of the Display Report button to change to "Loading..."
+    display_report_value = await page.locator(f"input#{DISPLAY_REPORT_ID}").get_attribute("value")
+    while display_report_value != "Loading...":
+        print("Waiting for loading to complete...")
+        # Check if #ContentPlaceHolder1_lblError has text content 'There is no AFR for the parameters you selected.'
+        error_text = await page.locator("#ContentPlaceHolder1_lblError").inner_text()
+        if "There is no AFR for the parameters you selected." in error_text:
+            print("There is no AFR for the parameters you selected.")
+            cache.add_entry(
+                cmy=cmy,
+                data={"error": "There is no AFR for the parameters you selected."}
+            )
+            # If so, skip this entry
+            raise NoAFRException
+
+        display_report_value = await page.locator(f"input#{DISPLAY_REPORT_ID}").get_attribute("value")
+        await asyncio.sleep(0.5)
+    await wait(page)
+
+async def get_options(page, select_id: str):
     return await page.locator(f"select#{select_id} option").all()
 
-async def select(page, select_id, value):
+async def select(page, select_id: str, value: str, wait_after: bool = True):
     await page.select_option(f"select#{select_id}", value)
+    if wait_after:
+        await wait(page)
 
 async def wait(page):
     await page.wait_for_timeout(1000)
-    # await page.wait_for_load_state("networkidle")
+
+async def save_download(download, cmy: CMY):
+    # Save the downloaded file to a specific path
+    await download.save_as(f"downloads/report_{cmy.county}_{cmy.municipality}_{cmy.year}.xlsx")
+
+async def get_option_value(option):
+    return await option.get_attribute("value")
+
+async def load_page(p: async_playwright):
+    browser = await p.chromium.launch(headless=False)
+    context = await browser.new_context()
+    page = await context.new_page()
+    await page.goto(BASE_URL)
+    await page.wait_for_load_state("networkidle")
+    return page
+
+async def display_report(page):
+    await page.click(f"input#{DISPLAY_REPORT_ID}")
+    await wait(page)
 
 async def main(cache: JsonCache):
 
-    # Load page
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False)
-        context = await browser.new_context()
-        page = await context.new_page()
-        await page.goto(BASE_URL)
-        await page.wait_for_load_state("networkidle")
+        page = await load_page(p)
+        await county_loop(cache, page)
 
-        # Get all counties from select with id "ContentPlaceHolder1_ddCountyId"
-        # TODO: Refactor this section
-        county_options = await get_options(page, COUNTY_SELECT_ID)
+async def county_loop_iteration(cache: JsonCache, page, county_option):
+    county_option_info = await get_option_info(county_option, COUNTIES)
+    cmy = CMY(county=county_option_info.label)
+    await select(page, COUNTY_SELECT_ID, county_option_info.value)
+    county_option_info.report()
+    await muni_loop(cache, cmy, page)
 
-        for county_option in county_options:
-            county_value = await county_option.get_attribute("value")
-            if county_value == "-1":
-                continue
-            county_label = await county_option.inner_text()
-            if county_label not in COUNTIES:
-                continue
-
-            await select(page, COUNTY_SELECT_ID, county_value)
-
-            await wait(page)
-
-            print(f"Value: {county_value}, Label: {county_label}")
-
-            muni_options = await get_options(page, MUNI_SELECT_ID)
-
-            for muni_option in muni_options:
-                muni_value = await muni_option.get_attribute("value")
-                if muni_value == "-1":
-                    continue
-
-                muni_label = await muni_option.inner_text()
-                if cache.has_all_municipality_entries(county_label, muni_label):
-                    continue
-
-                print(f"Value: {muni_value}, Label: {muni_label}")
-                await select(page, MUNI_SELECT_ID, muni_value)
-                await wait(page)
-
-                year_options = await get_options(page, YEAR_SELECT_ID)
-
-                for year_option in year_options:
-                    year_value = await year_option.get_attribute("value")
-                    if year_value == "-1":
-                        continue
-                    year_label = await year_option.inner_text()
-                    if cache.get_entry(county_label, muni_label, year_label):
-                        continue
-                    if year_label not in YEARS:
-                        continue
-                    print(f"Value: {year_value}, Label: {year_label}")
-                    await select(page, YEAR_SELECT_ID, year_value)
-                    await wait(page)
-
-                    # Click "Display Report"
-                    await page.click(f"input#{DISPLAY_REPORT_ID}")
-                    await wait(page)
-
-                    # Wait the value of the Display Report button to change to "Loading..."
-                    display_report_value = await page.locator(f"input#{DISPLAY_REPORT_ID}").get_attribute("value")
-                    while display_report_value != "Loading...":
-                        print("Waiting for report to load...")
-                        display_report_value = await page.locator(f"input#{DISPLAY_REPORT_ID}").get_attribute("value")
-                        await asyncio.sleep(0.5)
-
-                    await wait(page)
-
-                    # Wait for #ctl00_ContentPlaceHolder1_rvReport_ctl05_ctl04_ctl00_ButtonImg to be visible
-                    try:
-                        print("Waiting for report to load...")
-                        await page.wait_for_selector("#ctl00_ContentPlaceHolder1_rvReport_ctl05_ctl04_ctl00_ButtonImg")
-                    except _errors.TimeoutError:
-                        cache.add_entry(
-                            county=county_label,
-                            municipality=muni_label,
-                            year=year_label,
-                            data={"error": "Timeout while waiting for report to load"}
-                        )
-                        continue
-
-                    await wait(page)
-
-                    async with page.expect_download(timeout=60000) as download_info:
-                        print("Waiting for report to download...")
-                        # Trigger the download via JS call
-                        try:
-                            await page.evaluate("""
-                                $find('ctl00_ContentPlaceHolder1_rvReport').exportReport('EXCELOPENXML');
-                            """)
-                        except Error:
-                            if "The report or page is being updated" in str(Error):
-                                await wait(page)
-                                await page.evaluate("""
-                                    $find('ctl00_ContentPlaceHolder1_rvReport').exportReport('EXCELOPENXML');
-                                """)
-
-                    # Get the download object
-                    download = await download_info.value
-
-                    # Save the downloaded file to a specific path
-                    await download.save_as(f"downloads/report_{county_label}_{muni_label}_{year_label}.xlsx")
-
-                    cache.add_entry(
-                        county=county_label,
-                        municipality=muni_label,
-                        year=year_label,
-                        data=True
-                    )
-                    cache.save_cache()
+async def county_loop(cache: JsonCache, page):
+    county_options = await get_options(page, COUNTY_SELECT_ID)
+    for county_option in county_options:
+        try:
+            await county_loop_iteration(cache, page, county_option)
+        except InvalidOptionException:
+            continue
 
 
+async def muni_loop_iteration(cache: JsonCache, cmy: CMY, page, muni_option):
+    muni_option_info = await get_option_info(muni_option)
+    cmy.municipality = muni_option_info.label
+    if cache.has_all_municipality_entries(cmy):
+        raise EntryExistsException
+    muni_option_info.report()
+    await select(page, MUNI_SELECT_ID, muni_option_info.value)
+    await year_loop(cache, cmy, page)
+
+async def muni_loop(cache: JsonCache, cmy: CMY, page):
+    muni_options = await get_options(page, MUNI_SELECT_ID)
+    for muni_option in muni_options:
+        try:
+            await muni_loop_iteration(cache, cmy, page, muni_option)
+        except (
+            EntryExistsException,
+            InvalidOptionException
+        ):
+            continue
 
 
+async def year_loop_iteration(cache: JsonCache, cmy: CMY, page, year_option):
+    year_option_info = await get_option_info(
+        option=year_option,
+        valid_labels=YEARS
+    )
+    cmy.year = year_option_info.label
+    if cache.get_entry(cmy):
+        raise EntryExistsException
+    year_option_info.report()
+    await select(page, YEAR_SELECT_ID, year_option_info.value, wait_after=False)
+    await display_report(page)
+    await wait_for_loading(page, cache, cmy)
+    await wait_for_report(page=page, cache=cache, cmy=cmy)
+    await download_and_save(page, cmy)
 
+    cache.add_entry(
+        cmy=cmy,
+        data=True
+    )
 
+async def year_loop(cache: JsonCache, cmy: CMY, page):
+    year_options = await get_options(page, YEAR_SELECT_ID)
+    for year_option in year_options:
+        try:
+            await year_loop_iteration(cache, cmy, page, year_option)
+        except (
+                EntryExistsException,
+                NoAFRException,
+                InvalidOptionException,
+                _errors.TimeoutError
+        ):
+            continue
 
-        # TODO: Next do municipalities
-
-        # TODO: Next do years
-
-        # TODO: Next do `Display Report` select
-
-        # TODO: Add filtering by county and year
-
-        # TODO: Add caching to track results.
-
-        # TODO: Add download
 
 
 if __name__ == "__main__":
     cache = JsonCache("cache.json")
     cache.load_cache()
-    try:
-        asyncio.run(main(cache))
-    except Exception as e:
-        cache.save_cache()
-        raise e
+    max_additional_attempts = 5
+    for i in range(max_additional_attempts):
+        try:
+            asyncio.run(main(cache))
+            exit(0)
+        except Exception as e:
+            cache.save_cache()
+            print(f"Error: {e}. Restarting ({max_additional_attempts - i} attempts left).")
+    asyncio.run(main(cache))
 
 
