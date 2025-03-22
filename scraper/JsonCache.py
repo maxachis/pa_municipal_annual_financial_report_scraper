@@ -2,8 +2,8 @@ import json
 from pathlib import Path
 from typing import Any
 
-from constants import YEARS
-from data_objects import CMY
+from scraper.constants import YEARS
+from scraper.data_objects import CMY
 
 
 class JsonCache:
@@ -18,6 +18,11 @@ class JsonCache:
     def add_entry(self, cmy: CMY, data: Any):
         """Add an entry to the cache."""
         self.cache.setdefault(cmy.county, {}).setdefault(cmy.municipality, {})[cmy.year] = data
+        self.save_cache()
+
+    def update_entry(self, cmy: CMY, data: Any):
+        """Update an entry in the cache."""
+        self.cache[cmy.county][cmy.municipality][cmy.year] = data
         self.save_cache()
 
     def has_all_municipality_entries(self, cmy: CMY) -> bool:
@@ -43,3 +48,18 @@ class JsonCache:
                 self.cache = json.load(f)
         else:
             self.cache = {}
+
+    def get_as_list_of_CMY(self) -> list[CMY]:
+        cmy_list = []
+        for county in self.cache.keys():
+            for municipality in self.cache[county].keys():
+                for year in self.cache[county][municipality].keys():
+                    entry = self.cache[county][municipality][year]
+                    # TODO: This will need changed once the scraper records data as dictionaries
+                    if isinstance(entry, dict):
+                        continue
+                    cmy_list.append(CMY(
+                        county=county,
+                        municipality=municipality,
+                        year=year))
+        return cmy_list

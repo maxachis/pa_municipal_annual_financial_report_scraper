@@ -64,7 +64,7 @@ async def wait_for_report(page, cache: JsonCache, cmy: CMY):
     except _errors.TimeoutError:
         cache.add_entry(
             cmy=cmy,
-            data={"error": "Timeout while waiting for report to load"}
+            data={"scraper_error": "Timeout while waiting for report to load"}
         )
         raise
 
@@ -80,7 +80,7 @@ async def wait_for_loading(page, cache: JsonCache, cmy: CMY):
             print("There is no AFR for the parameters you selected.")
             cache.add_entry(
                 cmy=cmy,
-                data={"error": "There is no AFR for the parameters you selected."}
+                data={"scraper_error": "There is no AFR for the parameters you selected."}
             )
             # If so, skip this entry
             raise NoAFRException
@@ -179,7 +179,9 @@ async def year_loop_iteration(cache: JsonCache, cmy: CMY, page, year_option):
 
     cache.add_entry(
         cmy=cmy,
-        data=True
+        data={
+            "scraped": True
+        }
     )
 
 async def year_loop(cache: JsonCache, cmy: CMY, page):
@@ -198,7 +200,7 @@ async def year_loop(cache: JsonCache, cmy: CMY, page):
 
 
 if __name__ == "__main__":
-    cache = JsonCache("cache.json")
+    cache = JsonCache("../cache.json")
     cache.load_cache()
     max_additional_attempts = 5
     for i in range(max_additional_attempts):

@@ -1,2 +1,5 @@
 playwright~=1.50.0
 pydantic~=2.10.6
+openpyxl~=3.1.5
+SQLAlchemy~=2.0.39
+alembic~=1.15.1
