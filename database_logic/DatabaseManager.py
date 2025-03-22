@@ -4,7 +4,7 @@ from typing import Optional
 from sqlalchemy import create_engine, select, case, func
 from sqlalchemy.orm import sessionmaker, Session
 
-from database_logic.models import Base, AnnualFinancialReportDetails, CodeLabel
+from database_logic.models import Base, AnnualFinancialReportDetails, Code
 from report_creator.data_objects import CMYBreakdownRow
 
 
@@ -34,14 +34,14 @@ class DatabaseManager:
 
     @session_manager
     def code_label_exists(self, session: Session, code: str) -> bool:
-        code_label = session.query(CodeLabel).filter_by(code=code).first()
+        code_label = session.query(Code).filter_by(code=code).first()
         return code_label is not None
 
 
 
     @session_manager
     def add_code_label(self, session: Session, code: str, label: str):
-        code_label = CodeLabel(code=code, label=label)
+        code_label = Code(code=code, label=label)
         session.add(code_label)
 
     @session_manager

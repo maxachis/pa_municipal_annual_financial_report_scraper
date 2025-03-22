@@ -3,11 +3,10 @@ from sqlalchemy.orm import declarative_base, relationship
 
 Base = declarative_base()
 
-class CodeLabel(Base):
-    __tablename__ = "code_labels"
+class Code(Base):
+    __tablename__ = "codes"
     code = Column(String, primary_key=True)
     label = Column(String)
-    government_level = Column(Enum("federal", "state", "local"))
 
 
 class AnnualFinancialReportDetails(Base):
