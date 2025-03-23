@@ -4,11 +4,16 @@ from typing import Optional
 from sqlalchemy import create_engine, select, case, func
 from sqlalchemy.orm import sessionmaker, Session
 
+from config import FEDERAL_CODES, STATE_CODES, LOCAL_CODES
 from database_logic.models import Base, AnnualFinancialReportDetails, Code
 from report_creator.data_objects import CMYBreakdownRow
 
 
 class DatabaseManager:
+    """
+    The database manager is the primary interface for the SQLite database.
+    It utilizes SQLAlchemy to interact with the database.
+    """
     def __init__(self):
         self.engine = create_engine('sqlite:///database.db')
         Base.metadata.create_all(self.engine)
@@ -65,50 +70,6 @@ class DatabaseManager:
 
     @session_manager
     def get_row_breakdowns(self, session: Session) -> list[CMYBreakdownRow]:
-        # Define your sets
-        federal_codes = [
-            '351.01',
-            '351.02',
-            '351.03',
-            '351.04',
-            '351.05',
-            '351.06',
-            '351.07',
-            '351.08',
-            '351.09',
-            '351.1',
-            '351.11',
-            '351.12',
-            '351.13',
-            '351.XX'
-        ]
-        state_codes = [
-            '354.01',
-            '354.02',
-            '354.03',
-            '354.04',
-            '345.05',
-            '345.06',
-            '345.07',
-            '345.08',
-            '354.09',
-            '354.1',
-            '354.11',
-            '354.12',
-            '354.13',
-            '354.14',
-            '354.15',
-            '354.XX',
-            '355.08'
-        ]
-        local_codes = [
-            '357.01',
-            '357.02',
-            '357.03',
-            '357.XX'
-        ]
-
-
         query = (
             select(
                 AnnualFinancialReportDetails.county,
@@ -118,7 +79,7 @@ class DatabaseManager:
                     case(
                         (
                             AnnualFinancialReportDetails.code.in_(
-                                federal_codes
+                                FEDERAL_CODES
                             ),
                             AnnualFinancialReportDetails.total
                         ),
@@ -128,7 +89,7 @@ class DatabaseManager:
                     case(
                         (
                             AnnualFinancialReportDetails.code.in_(
-                                state_codes
+                                STATE_CODES
                             ),
                             AnnualFinancialReportDetails.total
                         ),
@@ -139,7 +100,7 @@ class DatabaseManager:
                     case(
                         (
                             AnnualFinancialReportDetails.code.in_(
-                                local_codes
+                                LOCAL_CODES
                             ),
                             AnnualFinancialReportDetails.total
                         ),

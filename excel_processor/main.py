@@ -1,20 +1,15 @@
 import re
-from typing import Optional
-import sqlite3
 
 from openpyxl.reader.excel import load_workbook
 from openpyxl.workbook import Workbook
 from openpyxl.worksheet.worksheet import Worksheet
 from sqlalchemy.exc import IntegrityError
 
+from config import SHEET_NAME, TOTAL_COLUMN, CODE_COLUMN, LABEL_COLUMN
 from database_logic.DatabaseManager import DatabaseManager
 from scraper.JsonCache import JsonCache
 from scraper.data_objects import CMY
 
-SHEET_NAME = "Sheet3"
-CODE_COLUMN = 1
-LABEL_COLUMN = 2
-TOTAL_COLUMN = 10
 MAX_ROW = 1000
 VALID_ROW_REGEX = r"^[\d\-\.]+$"  # Regex for row containing only numbers, decimals, and hyphens
 
@@ -22,6 +17,9 @@ def open_excel_file(file_path: str) -> Workbook:
     return load_workbook(file_path)
 
 class ExcelProcessor:
+    """
+    Class for processing scraped excel files and adding them to the database
+    """
 
     def __init__(self):
         self.database_manager = DatabaseManager()
@@ -34,13 +32,10 @@ class ExcelProcessor:
             try:
                 wb = self.get_excel_file(cmy)
                 self.process_excel_file(wb, cmy)
-                self.cache.update_entry(cmy, {
-                    "scraped": True,
-                    "processed": True
-                })
+                self.cache.mark_as_processed(cmy)
             except Exception as e:
                 print(f"Error processing {cmy.county} {cmy.municipality} {cmy.year}: {e}")
-                self.cache.update_entry(cmy, {"process_error": str(e)})
+                self.cache.add_process_error(cmy, str(e))
 
     def get_excel_file(self, cmy: CMY) -> Workbook:
         return open_excel_file(f"downloads/report_{cmy.county}_{cmy.municipality}_{cmy.year}.xlsx")

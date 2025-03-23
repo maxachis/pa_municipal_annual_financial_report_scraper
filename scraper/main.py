@@ -6,7 +6,8 @@ from playwright._impl._errors import Error
 from playwright.async_api import async_playwright
 
 from JsonCache import JsonCache
-from constants import COUNTIES, YEARS, DISPLAY_REPORT_ID, YEAR_SELECT_ID, MUNI_SELECT_ID, COUNTY_SELECT_ID, BASE_URL
+from constants import DISPLAY_REPORT_ID, YEAR_SELECT_ID, MUNI_SELECT_ID, COUNTY_SELECT_ID, BASE_URL
+from config import COUNTIES, YEARS
 from data_objects import CMY, OptionInfo
 from exceptions import NoAFRException, InvalidOptionException, EntryExistsException
 
@@ -62,10 +63,7 @@ async def wait_for_report(page, cache: JsonCache, cmy: CMY):
         await page.wait_for_selector("#ctl00_ContentPlaceHolder1_rvReport_ctl05_ctl04_ctl00_ButtonImg")
         await wait(page)
     except _errors.TimeoutError:
-        cache.add_entry(
-            cmy=cmy,
-            data={"scraper_error": "Timeout while waiting for report to load"}
-        )
+        cache.add_scraper_error(cmy=cmy, error="Timeout while waiting for report to load")
         raise
 
 
@@ -78,10 +76,11 @@ async def wait_for_loading(page, cache: JsonCache, cmy: CMY):
         error_text = await page.locator("#ContentPlaceHolder1_lblError").inner_text()
         if "There is no AFR for the parameters you selected." in error_text:
             print("There is no AFR for the parameters you selected.")
-            cache.add_entry(
+            cache.add_scraper_error(
                 cmy=cmy,
-                data={"scraper_error": "There is no AFR for the parameters you selected."}
+                error="There is no AFR for the parameters you selected."
             )
+            cache.mark_as_scraped(cmy=cmy)
             # If so, skip this entry
             raise NoAFRException
 
@@ -144,7 +143,7 @@ async def county_loop(cache: JsonCache, page):
 async def muni_loop_iteration(cache: JsonCache, cmy: CMY, page, muni_option):
     muni_option_info = await get_option_info(muni_option)
     cmy.municipality = muni_option_info.label
-    if cache.has_all_municipality_entries(cmy):
+    if cache.all_municipalities_scraped(cmy):
         raise EntryExistsException
     muni_option_info.report()
     await select(page, MUNI_SELECT_ID, muni_option_info.value)
@@ -168,7 +167,7 @@ async def year_loop_iteration(cache: JsonCache, cmy: CMY, page, year_option):
         valid_labels=YEARS
     )
     cmy.year = year_option_info.label
-    if cache.get_entry(cmy):
+    if cache.is_scraped(cmy):
         raise EntryExistsException
     year_option_info.report()
     await select(page, YEAR_SELECT_ID, year_option_info.value, wait_after=False)
@@ -177,12 +176,7 @@ async def year_loop_iteration(cache: JsonCache, cmy: CMY, page, year_option):
     await wait_for_report(page=page, cache=cache, cmy=cmy)
     await download_and_save(page, cmy)
 
-    cache.add_entry(
-        cmy=cmy,
-        data={
-            "scraped": True
-        }
-    )
+    cache.mark_as_scraped(cmy=cmy)
 
 async def year_loop(cache: JsonCache, cmy: CMY, page):
     year_options = await get_options(page, YEAR_SELECT_ID)

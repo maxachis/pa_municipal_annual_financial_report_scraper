@@ -1454,7 +1454,10 @@
         },
         "MCDONALD BORO": {
             "2019": {
-                "error": "Timeout while waiting for report to load"
+                "scraped": false,
+                "scraper_error": "Timeout while waiting for report to load",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
                 "scraped": true,
@@ -4185,19 +4188,34 @@
         },
         "EASTVALE BORO": {
             "2019": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2017": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2016": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2015": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             }
         },
         "ECONOMY BORO": {
@@ -4224,17 +4242,26 @@
         },
         "ELLWOOD CITY BORO": {
             "2019": {
-                "error": "Timeout while waiting for report to load"
+                "scraped": false,
+                "scraper_error": "Timeout while waiting for report to load",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
-                "error": "Timeout while waiting for report to load"
+                "scraped": false,
+                "scraper_error": "Timeout while waiting for report to load",
+                "processed": false,
+                "process_error": null
             },
             "2017": {
                 "scraped": true,
                 "processed": true
             },
             "2016": {
-                "error": "Timeout while waiting for report to load"
+                "scraped": false,
+                "scraper_error": "Timeout while waiting for report to load",
+                "processed": false,
+                "process_error": null
             },
             "2015": {
                 "scraped": true,
@@ -4243,10 +4270,16 @@
         },
         "FALLSTON BORO": {
             "2019": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2017": {
                 "scraped": true,
@@ -4263,19 +4296,34 @@
         },
         "FRANKFORT SPRINGS BORO": {
             "2019": {
-                "error": "Timeout while waiting for report to load"
+                "scraped": false,
+                "scraper_error": "Timeout while waiting for report to load",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2017": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2016": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2015": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             }
         },
         "FRANKLIN TWP": {
@@ -4434,7 +4482,10 @@
         },
         "HOMEWOOD BORO": {
             "2019": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
                 "scraped": true,
@@ -5953,19 +6004,34 @@
         },
         "PORTERSVILLE BORO": {
             "2019": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2017": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2016": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2015": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             }
         },
         "PROSPECT BORO": {
@@ -6522,16 +6588,28 @@
         },
         "FAYETTE CITY BORO": {
             "2019": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2017": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2016": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2015": {
                 "scraped": true,
@@ -7952,19 +8030,34 @@
         },
         "CANOE TWP": {
             "2019": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2017": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2016": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2015": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             }
         },
         "CENTER TWP": {
@@ -9551,463 +9644,475 @@
                 "processed": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_CLAYSVILLE BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "COAL CENTER BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_COAL CENTER BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_COAL CENTER BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_COAL CENTER BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_COAL CENTER BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_COAL CENTER BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "COKEBURG BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_COKEBURG BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_COKEBURG BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_COKEBURG BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_COKEBURG BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_COKEBURG BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "CROSS CREEK TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_CROSS CREEK TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_CROSS CREEK TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_CROSS CREEK TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_CROSS CREEK TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_CROSS CREEK TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "DEEMSTON BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DEEMSTON BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DEEMSTON BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DEEMSTON BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DEEMSTON BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DEEMSTON BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "DONEGAL TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DONEGAL TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DONEGAL TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DONEGAL TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DONEGAL TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DONEGAL TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "DONORA BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DONORA BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DONORA BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DONORA BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DONORA BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DONORA BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "DUNLEVY BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DUNLEVY BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DUNLEVY BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DUNLEVY BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DUNLEVY BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_DUNLEVY BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "EAST BETHLEHEM TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST BETHLEHEM TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST BETHLEHEM TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST BETHLEHEM TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST BETHLEHEM TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST BETHLEHEM TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "EAST FINLEY TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST FINLEY TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST FINLEY TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST FINLEY TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST FINLEY TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST FINLEY TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "EAST WASHINGTON BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST WASHINGTON BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST WASHINGTON BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST WASHINGTON BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST WASHINGTON BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_EAST WASHINGTON BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "ELCO BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ELCO BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ELCO BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ELCO BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ELCO BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ELCO BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "ELLSWORTH BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ELLSWORTH BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ELLSWORTH BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ELLSWORTH BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ELLSWORTH BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ELLSWORTH BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "FALLOWFIELD TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_FALLOWFIELD TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_FALLOWFIELD TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_FALLOWFIELD TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_FALLOWFIELD TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_FALLOWFIELD TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "FINLEYVILLE BORO": {
             "2019": {
-                "error": "Timeout while waiting for report to load"
+                "scraped": false,
+                "scraper_error": "Timeout while waiting for report to load",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2017": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2016": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_FINLEYVILLE BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "GREEN HILLS BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_GREEN HILLS BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_GREEN HILLS BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_GREEN HILLS BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_GREEN HILLS BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_GREEN HILLS BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "HANOVER TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HANOVER TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HANOVER TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HANOVER TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HANOVER TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HANOVER TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "HOPEWELL TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HOPEWELL TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HOPEWELL TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HOPEWELL TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HOPEWELL TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HOPEWELL TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "HOUSTON BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HOUSTON BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HOUSTON BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HOUSTON BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HOUSTON BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_HOUSTON BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "INDEPENDENCE TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_INDEPENDENCE TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_INDEPENDENCE TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_INDEPENDENCE TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_INDEPENDENCE TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_INDEPENDENCE TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "JEFFERSON TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_JEFFERSON TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_JEFFERSON TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_JEFFERSON TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_JEFFERSON TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_JEFFERSON TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "LONG BRANCH BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_LONG BRANCH BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_LONG BRANCH BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_LONG BRANCH BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_LONG BRANCH BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_LONG BRANCH BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "MARIANNA BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MARIANNA BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MARIANNA BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MARIANNA BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MARIANNA BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MARIANNA BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "MCDONALD BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MCDONALD BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MCDONALD BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MCDONALD BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MCDONALD BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MCDONALD BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "MIDWAY BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MIDWAY BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MIDWAY BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MIDWAY BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MIDWAY BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MIDWAY BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "MONONGAHELA CITY": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MONONGAHELA CITY_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MONONGAHELA CITY_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MONONGAHELA CITY_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MONONGAHELA CITY_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MONONGAHELA CITY_2015.xlsx'"
+                "scraped": true
             }
         },
         "MORRIS TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MORRIS TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MORRIS TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MORRIS TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MORRIS TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MORRIS TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "MT PLEASANT TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MT PLEASANT TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MT PLEASANT TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MT PLEASANT TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_MT PLEASANT TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
                 "scraped": true,
@@ -10016,1499 +10121,2243 @@
         },
         "NEW EAGLE BORO": {
             "2019": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NEW EAGLE BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NEW EAGLE BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NEW EAGLE BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "NORTH BETHLEHEM TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH BETHLEHEM TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH BETHLEHEM TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH BETHLEHEM TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH BETHLEHEM TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH BETHLEHEM TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "NORTH CHARLEROI BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH CHARLEROI BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH CHARLEROI BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH CHARLEROI BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH CHARLEROI BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH CHARLEROI BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "NORTH FRANKLIN TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH FRANKLIN TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH FRANKLIN TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH FRANKLIN TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH FRANKLIN TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH FRANKLIN TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "NORTH STRABANE TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH STRABANE TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH STRABANE TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH STRABANE TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH STRABANE TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NORTH STRABANE TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "NOTTINGHAM TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NOTTINGHAM TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NOTTINGHAM TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NOTTINGHAM TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NOTTINGHAM TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_NOTTINGHAM TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "PETERS TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_PETERS TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_PETERS TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_PETERS TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_PETERS TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_PETERS TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "ROBINSON TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ROBINSON TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ROBINSON TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ROBINSON TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ROBINSON TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ROBINSON TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "ROSCOE BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ROSCOE BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ROSCOE BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ROSCOE BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ROSCOE BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_ROSCOE BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "SMITH TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SMITH TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SMITH TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SMITH TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SMITH TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SMITH TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "SOMERSET TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOMERSET TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOMERSET TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOMERSET TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOMERSET TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOMERSET TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "SOUTH FRANKLIN TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOUTH FRANKLIN TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOUTH FRANKLIN TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOUTH FRANKLIN TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOUTH FRANKLIN TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOUTH FRANKLIN TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "SOUTH STRABANE TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOUTH STRABANE TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOUTH STRABANE TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOUTH STRABANE TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOUTH STRABANE TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SOUTH STRABANE TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "SPEERS BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SPEERS BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SPEERS BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SPEERS BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SPEERS BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_SPEERS BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "STOCKDALE BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_STOCKDALE BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_STOCKDALE BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_STOCKDALE BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_STOCKDALE BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_STOCKDALE BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "TWILIGHT BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_TWILIGHT BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_TWILIGHT BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_TWILIGHT BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_TWILIGHT BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_TWILIGHT BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "UNION TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_UNION TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_UNION TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_UNION TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_UNION TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_UNION TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "WASHINGTON CITY": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WASHINGTON CITY_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WASHINGTON CITY_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WASHINGTON CITY_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WASHINGTON CITY_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WASHINGTON CITY_2015.xlsx'"
+                "scraped": true
             }
         },
         "WEST BETHLEHEM TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST BETHLEHEM TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST BETHLEHEM TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST BETHLEHEM TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST BETHLEHEM TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST BETHLEHEM TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "WEST BROWNSVILLE BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST BROWNSVILLE BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST BROWNSVILLE BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST BROWNSVILLE BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST BROWNSVILLE BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST BROWNSVILLE BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "WEST FINLEY TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST FINLEY TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST FINLEY TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST FINLEY TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST FINLEY TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST FINLEY TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "WEST MIDDLETOWN BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST MIDDLETOWN BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST MIDDLETOWN BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST MIDDLETOWN BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST MIDDLETOWN BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST MIDDLETOWN BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "WEST PIKE RUN TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST PIKE RUN TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST PIKE RUN TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST PIKE RUN TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST PIKE RUN TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WASHINGTON_WEST PIKE RUN TWP_2015.xlsx'"
+                "scraped": true
             }
         }
     },
     "WESTMORELAND": {
         "ADAMSBURG BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ADAMSBURG BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ADAMSBURG BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ADAMSBURG BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ADAMSBURG BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ADAMSBURG BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "ALLEGHENY TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ALLEGHENY TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ALLEGHENY TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ALLEGHENY TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ALLEGHENY TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ALLEGHENY TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "ARNOLD CITY": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ARNOLD CITY_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ARNOLD CITY_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ARNOLD CITY_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ARNOLD CITY_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ARNOLD CITY_2015.xlsx'"
+                "scraped": true
             }
         },
         "ARONA BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ARONA BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ARONA BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ARONA BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ARONA BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ARONA BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "AVONMORE BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_AVONMORE BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_AVONMORE BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_AVONMORE BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_AVONMORE BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_AVONMORE BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "BELL TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_BELL TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_BELL TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_BELL TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_BELL TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_BELL TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "BOLIVAR BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_BOLIVAR BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_BOLIVAR BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_BOLIVAR BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_BOLIVAR BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_BOLIVAR BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "COOK TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_COOK TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_COOK TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_COOK TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_COOK TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_COOK TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "DELMONT BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DELMONT BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DELMONT BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DELMONT BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DELMONT BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DELMONT BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "DERRY BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DERRY BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DERRY BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DERRY BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DERRY BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DERRY BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "DERRY  TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DERRY  TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DERRY  TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DERRY  TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DERRY  TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DERRY  TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "DONEGAL BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DONEGAL BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DONEGAL BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DONEGAL BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DONEGAL BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DONEGAL BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "DONEGAL TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DONEGAL TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DONEGAL TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DONEGAL TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DONEGAL TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_DONEGAL TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "EAST HUNTINGDON TWP": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EAST HUNTINGDON TWP_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EAST HUNTINGDON TWP_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EAST HUNTINGDON TWP_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EAST HUNTINGDON TWP_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EAST HUNTINGDON TWP_2015.xlsx'"
+                "scraped": true
             }
         },
         "EAST VANDERGRIFT BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EAST VANDERGRIFT BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EAST VANDERGRIFT BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EAST VANDERGRIFT BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EAST VANDERGRIFT BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EAST VANDERGRIFT BORO_2015.xlsx'"
+                "scraped": true
             }
         },
         "EXPORT BORO": {
             "2019": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EXPORT BORO_2019.xlsx'"
+                "scraped": true
             },
             "2018": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EXPORT BORO_2018.xlsx'"
+                "scraped": true
             },
             "2017": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EXPORT BORO_2017.xlsx'"
+                "scraped": true
             },
             "2016": {
-                "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EXPORT BORO_2016.xlsx'"
+                "scraped": true
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_EXPORT BORO_2015.xlsx'"
             }
         },
         "FAIRFIELD TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_FAIRFIELD TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_FAIRFIELD TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_FAIRFIELD TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_FAIRFIELD TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_FAIRFIELD TWP_2015.xlsx'"
             }
         },
         "GREENSBURG CITY": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_GREENSBURG CITY_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_GREENSBURG CITY_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_GREENSBURG CITY_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_GREENSBURG CITY_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_GREENSBURG CITY_2015.xlsx'"
             }
         },
         "HEMPFIELD TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HEMPFIELD TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HEMPFIELD TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HEMPFIELD TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HEMPFIELD TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HEMPFIELD TWP_2015.xlsx'"
             }
         },
         "HUNKER BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HUNKER BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HUNKER BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HUNKER BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HUNKER BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HUNKER BORO_2015.xlsx'"
             }
         },
         "HYDE PARK BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HYDE PARK BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HYDE PARK BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HYDE PARK BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HYDE PARK BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_HYDE PARK BORO_2015.xlsx'"
             }
         },
         "IRWIN BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_IRWIN BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_IRWIN BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_IRWIN BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_IRWIN BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_IRWIN BORO_2015.xlsx'"
             }
         },
         "JEANNETTE CITY": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_JEANNETTE CITY_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_JEANNETTE CITY_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_JEANNETTE CITY_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_JEANNETTE CITY_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_JEANNETTE CITY_2015.xlsx'"
             }
         },
         "LATROBE BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LATROBE BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LATROBE BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LATROBE BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LATROBE BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LATROBE BORO_2015.xlsx'"
             }
         },
         "LAUREL MOUNTAIN BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LAUREL MOUNTAIN BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LAUREL MOUNTAIN BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LAUREL MOUNTAIN BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LAUREL MOUNTAIN BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LAUREL MOUNTAIN BORO_2015.xlsx'"
             }
         },
         "LIGONIER BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LIGONIER BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LIGONIER BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LIGONIER BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LIGONIER BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LIGONIER BORO_2015.xlsx'"
             }
         },
         "LIGONIER TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LIGONIER TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LIGONIER TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LIGONIER TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LIGONIER TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LIGONIER TWP_2015.xlsx'"
             }
         },
         "LOWER BURRELL CITY": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LOWER BURRELL CITY_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LOWER BURRELL CITY_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LOWER BURRELL CITY_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LOWER BURRELL CITY_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LOWER BURRELL CITY_2015.xlsx'"
             }
         },
         "LOYALHANNA TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LOYALHANNA TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LOYALHANNA TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LOYALHANNA TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LOYALHANNA TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_LOYALHANNA TWP_2015.xlsx'"
             }
         },
         "MADISON BORO": {
             "2019": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MADISON BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MADISON BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MADISON BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MADISON BORO_2015.xlsx'"
             }
         },
         "MANOR BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MANOR BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MANOR BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MANOR BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MANOR BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MANOR BORO_2015.xlsx'"
             }
         },
         "MONESSEN CITY": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MONESSEN CITY_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MONESSEN CITY_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MONESSEN CITY_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MONESSEN CITY_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MONESSEN CITY_2015.xlsx'"
             }
         },
         "MT PLEASANT BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MT PLEASANT BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MT PLEASANT BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MT PLEASANT BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MT PLEASANT BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MT PLEASANT BORO_2015.xlsx'"
             }
         },
         "MT PLEASANT TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MT PLEASANT TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MT PLEASANT TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MT PLEASANT TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MT PLEASANT TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MT PLEASANT TWP_2015.xlsx'"
             }
         },
         "MURRYSVILLE BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MURRYSVILLE BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MURRYSVILLE BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MURRYSVILLE BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MURRYSVILLE BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_MURRYSVILLE BORO_2015.xlsx'"
             }
         },
         "NEW ALEXANDRIA BORO": {
             "2019": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2018": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2017": {
-                "error": "There is no AFR for the parameters you selected."
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW ALEXANDRIA BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW ALEXANDRIA BORO_2015.xlsx'"
             }
         },
         "NEW FLORENCE BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW FLORENCE BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW FLORENCE BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW FLORENCE BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW FLORENCE BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW FLORENCE BORO_2015.xlsx'"
             }
         },
         "NEW KENSINGTON CITY": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW KENSINGTON CITY_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW KENSINGTON CITY_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW KENSINGTON CITY_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW KENSINGTON CITY_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW KENSINGTON CITY_2015.xlsx'"
             }
         },
         "NEW STANTON BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW STANTON BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW STANTON BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW STANTON BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW STANTON BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NEW STANTON BORO_2015.xlsx'"
             }
         },
         "NORTH BELLE VERNON BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH BELLE VERNON BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH BELLE VERNON BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH BELLE VERNON BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH BELLE VERNON BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH BELLE VERNON BORO_2015.xlsx'"
             }
         },
         "NORTH HUNTINGDON TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH HUNTINGDON TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH HUNTINGDON TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH HUNTINGDON TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH HUNTINGDON TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH HUNTINGDON TWP_2015.xlsx'"
             }
         },
         "NORTH IRWIN BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH IRWIN BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH IRWIN BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH IRWIN BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH IRWIN BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_NORTH IRWIN BORO_2015.xlsx'"
             }
         },
         "OKLAHOMA BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_OKLAHOMA BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_OKLAHOMA BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_OKLAHOMA BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_OKLAHOMA BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_OKLAHOMA BORO_2015.xlsx'"
             }
         },
         "PENN BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_PENN BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_PENN BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_PENN BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_PENN BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_PENN BORO_2015.xlsx'"
             }
         },
         "PENN TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_PENN TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_PENN TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_PENN TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_PENN TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_PENN TWP_2015.xlsx'"
             }
         },
         "ROSTRAVER TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ROSTRAVER TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ROSTRAVER TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ROSTRAVER TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ROSTRAVER TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ROSTRAVER TWP_2015.xlsx'"
             }
         },
         "SALEM TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SALEM TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SALEM TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SALEM TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SALEM TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SALEM TWP_2015.xlsx'"
             }
         },
         "SCOTTDALE BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SCOTTDALE BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SCOTTDALE BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SCOTTDALE BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SCOTTDALE BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SCOTTDALE BORO_2015.xlsx'"
             }
         },
         "SEWARD BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SEWARD BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SEWARD BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SEWARD BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SEWARD BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SEWARD BORO_2015.xlsx'"
             }
         },
         "SEWICKLEY TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SEWICKLEY TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SEWICKLEY TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SEWICKLEY TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SEWICKLEY TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SEWICKLEY TWP_2015.xlsx'"
             }
         },
         "SMITHTON BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SMITHTON BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SMITHTON BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SMITHTON BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SMITHTON BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SMITHTON BORO_2015.xlsx'"
             }
         },
         "SOUTH GREENSBURG BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTH GREENSBURG BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTH GREENSBURG BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTH GREENSBURG BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTH GREENSBURG BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTH GREENSBURG BORO_2015.xlsx'"
             }
         },
         "SOUTH HUNTINGDON TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTH HUNTINGDON TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTH HUNTINGDON TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTH HUNTINGDON TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTH HUNTINGDON TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTH HUNTINGDON TWP_2015.xlsx'"
             }
         },
         "SOUTHWEST GREENSBURG BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTHWEST GREENSBURG BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTHWEST GREENSBURG BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTHWEST GREENSBURG BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTHWEST GREENSBURG BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SOUTHWEST GREENSBURG BORO_2015.xlsx'"
             }
         },
         "ST CLAIR TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ST CLAIR TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ST CLAIR TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ST CLAIR TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ST CLAIR TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_ST CLAIR TWP_2015.xlsx'"
             }
         },
         "SUTERSVILLE BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SUTERSVILLE BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SUTERSVILLE BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SUTERSVILLE BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SUTERSVILLE BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_SUTERSVILLE BORO_2015.xlsx'"
             }
         },
         "TRAFFORD BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_TRAFFORD BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_TRAFFORD BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_TRAFFORD BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_TRAFFORD BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_TRAFFORD BORO_2015.xlsx'"
             }
         },
         "UNITY TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_UNITY TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_UNITY TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_UNITY TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_UNITY TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_UNITY TWP_2015.xlsx'"
             }
         },
         "UPPER BURRELL TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_UPPER BURRELL TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_UPPER BURRELL TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_UPPER BURRELL TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_UPPER BURRELL TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_UPPER BURRELL TWP_2015.xlsx'"
             }
         },
         "VANDERGRIFT BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_VANDERGRIFT BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_VANDERGRIFT BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_VANDERGRIFT BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_VANDERGRIFT BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_VANDERGRIFT BORO_2015.xlsx'"
             }
         },
         "WASHINGTON TWP": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WASHINGTON TWP_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WASHINGTON TWP_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WASHINGTON TWP_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WASHINGTON TWP_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WASHINGTON TWP_2015.xlsx'"
             }
         },
         "WEST LEECHBURG BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WEST LEECHBURG BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WEST LEECHBURG BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WEST LEECHBURG BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WEST LEECHBURG BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WEST LEECHBURG BORO_2015.xlsx'"
             }
         },
         "WEST NEWTON BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WEST NEWTON BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WEST NEWTON BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WEST NEWTON BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WEST NEWTON BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_WEST NEWTON BORO_2015.xlsx'"
             }
         },
         "YOUNGSTOWN BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_YOUNGSTOWN BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_YOUNGSTOWN BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_YOUNGSTOWN BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_YOUNGSTOWN BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_YOUNGSTOWN BORO_2015.xlsx'"
             }
         },
         "YOUNGWOOD BORO": {
             "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_YOUNGWOOD BORO_2019.xlsx'"
             },
             "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_YOUNGWOOD BORO_2018.xlsx'"
             },
             "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_YOUNGWOOD BORO_2017.xlsx'"
             },
             "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_YOUNGWOOD BORO_2016.xlsx'"
             },
             "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
                 "process_error": "[Errno 2] No such file or directory: 'downloads/report_WESTMORELAND_YOUNGWOOD BORO_2015.xlsx'"
             }
         }

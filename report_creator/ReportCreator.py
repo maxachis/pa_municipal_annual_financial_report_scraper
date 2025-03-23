@@ -5,6 +5,10 @@ from report_creator.data_objects import CMYBreakdownRow
 
 
 class ReportCreator:
+    """
+    The ReportCreator class is responsible for creating
+    and saving the final excel report
+    """
 
     def __init__(self, report_name: str):
         self.report_name = report_name
