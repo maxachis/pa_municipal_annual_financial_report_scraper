@@ -72,7 +72,7 @@ class JsonCache:
 
     def _get_entry(self, cmy: CMY) -> CacheObject:
         """Retrieve an entry from the cache."""
-        raw_data = self.cache.get(cmy.county, {}).get(cmy.municipality, {}).get(cmy.year)
+        raw_data = self.cache.get(cmy.county, {}).get(cmy.municipality, {}).get(cmy.year, {})
         return CacheObject(**raw_data)
 
     def save_cache(self):
@@ -110,12 +110,27 @@ class JsonCache:
         self._update_entry(cmy, cache_object)
 
     def _update_entry(self, cmy: CMY, cache_object: CacheObject):
+        if cmy.county not in self.cache:
+            self.cache[cmy.county] = {}
+        if cmy.municipality not in self.cache[cmy.county]:
+            self.cache[cmy.county][cmy.municipality] = {}
+        if cmy.year not in self.cache[cmy.county][cmy.municipality]:
+            self.cache[cmy.county][cmy.municipality][cmy.year] = {}
         self.cache[cmy.county][cmy.municipality][cmy.year] = cache_object.model_dump()
         self.save_cache()
 
     def is_scraped(self, cmy: CMY) -> bool:
         result = self._get_entry(cmy)
         return result.scraped
+
+    def has_scraper_error(self, cmy: CMY, error_substring: str) -> bool:
+        result = self._get_entry(cmy)
+        if not result.scraper_error:
+            return False
+        return error_substring in result.scraper_error
+
+    def has_timeout_error(self, cmy: CMY) -> bool:
+        return self.has_scraper_error(cmy, "Timeout")
 
     def get_as_list_of_CMY(self) -> list[CMY]:
         cmy_list = []
@@ -132,3 +147,14 @@ class JsonCache:
                         continue
                     cmy_list.append(cmy)
         return cmy_list
+
+    def county_reset(self, county: str):
+        self.cache[county] = {}
+        self.save_cache()
+
+# Uncomment to reset county of choice
+if __name__ == "__main__":
+    cache = JsonCache("../cache.json")
+    cache.load_cache()
+    cache.county_reset("WESTMORELAND")
+    cache.save_cache()

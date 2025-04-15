@@ -34,8 +34,6 @@ async def download_and_save(page, cmy: CMY, additional_attempts: int = 2):
         # Try one final time, raising if it fails
         await trigger_download(page)
 
-
-
     # Get the download object
     download = await download_info.value
 
@@ -59,6 +57,8 @@ async def get_option_info(
 async def wait_for_report(page, cache: JsonCache, cmy: CMY):
     # Wait for #ctl00_ContentPlaceHolder1_rvReport_ctl05_ctl04_ctl00_ButtonImg to be visible
     try:
+        if cache.has_timeout_error(cmy=cmy):
+            raise _errors.TimeoutError("Timeout while waiting for report to load")
         print("Waiting for report to load...")
         await page.wait_for_selector("#ctl00_ContentPlaceHolder1_rvReport_ctl05_ctl04_ctl00_ButtonImg")
         await wait(page)
@@ -101,7 +101,9 @@ async def wait(page):
 
 async def save_download(download, cmy: CMY):
     # Save the downloaded file to a specific path
-    await download.save_as(f"downloads/report_{cmy.county}_{cmy.municipality}_{cmy.year}.xlsx")
+    file_name = f"downloads/report_{cmy.county}_{cmy.municipality}_{cmy.year}.xlsx"
+    print(f"Saving report to {file_name}")
+    await download.save_as(file_name)
 
 async def get_option_value(option):
     return await option.get_attribute("value")
@@ -119,7 +121,6 @@ async def display_report(page):
     await wait(page)
 
 async def main(cache: JsonCache):
-
     async with async_playwright() as p:
         page = await load_page(p)
         await county_loop(cache, page)
@@ -138,7 +139,6 @@ async def county_loop(cache: JsonCache, page):
             await county_loop_iteration(cache, page, county_option)
         except InvalidOptionException:
             continue
-
 
 async def muni_loop_iteration(cache: JsonCache, cmy: CMY, page, muni_option):
     muni_option_info = await get_option_info(muni_option)
@@ -196,7 +196,7 @@ async def year_loop(cache: JsonCache, cmy: CMY, page):
 if __name__ == "__main__":
     cache = JsonCache("../cache.json")
     cache.load_cache()
-    max_additional_attempts = 5
+    max_additional_attempts = 0
     for i in range(max_additional_attempts):
         try:
             asyncio.run(main(cache))
