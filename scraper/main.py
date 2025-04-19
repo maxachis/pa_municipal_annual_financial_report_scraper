@@ -1,3 +1,7 @@
+"""
+Main function for scraping municipal annual financial reports
+"""
+
 import asyncio
 from typing import Optional
 
@@ -19,12 +23,28 @@ async def trigger_download(page):
     """)
 
 async def download_and_save(page, cmy: CMY, additional_attempts: int = 2):
+    """
+    Download report and save to `/downloads` folder
+    :param page:
+    :param cmy:
+    :param additional_attempts:
+    :return:
+    """
+    download_info = await try_triggering_download(additional_attempts, page)
+
+    # Get the download object
+    download = await download_info.value
+
+    await save_download(download, cmy)
+
+
+async def try_triggering_download(additional_attempts, page):
     async with page.expect_download(timeout=60000) as download_info:
         print("Waiting for report to download...")
         for attempts in range(additional_attempts):
             try:
                 await trigger_download(page)
-                return
+                return download_info
             except Error as e:
                 if "The report or page is being updated" in str(e):
                     await wait(page)
@@ -33,16 +53,19 @@ async def download_and_save(page, cmy: CMY, additional_attempts: int = 2):
                     raise
         # Try one final time, raising if it fails
         await trigger_download(page)
+        return download_info
 
-    # Get the download object
-    download = await download_info.value
-
-    await save_download(download, cmy)
 
 async def get_option_info(
         option,
         valid_labels: Optional[list[str]] = None
 ) -> OptionInfo:
+    """
+    Get the value and label of an option
+    :param option:
+    :param valid_labels:
+    :return:
+    """
     value = await option.get_attribute("value")
     if value == "-1":
         raise InvalidOptionException
@@ -89,14 +112,17 @@ async def wait_for_loading(page, cache: JsonCache, cmy: CMY):
     await wait(page)
 
 async def get_options(page, select_id: str):
+    # Get all options from a select
     return await page.locator(f"select#{select_id} option").all()
 
 async def select(page, select_id: str, value: str, wait_after: bool = True):
+    # Select from a select option
     await page.select_option(f"select#{select_id}", value)
     if wait_after:
         await wait(page)
 
 async def wait(page):
+    # Wait for 1 second
     await page.wait_for_timeout(1000)
 
 async def save_download(download, cmy: CMY):
@@ -117,15 +143,13 @@ async def load_page(p: async_playwright):
     return page
 
 async def display_report(page):
+    # Click the Display Report button
     await page.click(f"input#{DISPLAY_REPORT_ID}")
     await wait(page)
 
-async def main(cache: JsonCache):
-    async with async_playwright() as p:
-        page = await load_page(p)
-        await county_loop(cache, page)
 
 async def county_loop_iteration(cache: JsonCache, page, county_option):
+    # Perform requisite actions in county loop
     county_option_info = await get_option_info(county_option, COUNTIES)
     cmy = CMY(county=county_option_info.label)
     await select(page, COUNTY_SELECT_ID, county_option_info.value)
@@ -133,6 +157,7 @@ async def county_loop_iteration(cache: JsonCache, page, county_option):
     await muni_loop(cache, cmy, page)
 
 async def county_loop(cache: JsonCache, page):
+    # Loop through all available counties
     county_options = await get_options(page, COUNTY_SELECT_ID)
     for county_option in county_options:
         try:
@@ -141,6 +166,7 @@ async def county_loop(cache: JsonCache, page):
             continue
 
 async def muni_loop_iteration(cache: JsonCache, cmy: CMY, page, muni_option):
+    # Perform requisite actions in municipality loop
     muni_option_info = await get_option_info(muni_option)
     cmy.municipality = muni_option_info.label
     if cache.all_municipalities_scraped(cmy):
@@ -150,6 +176,7 @@ async def muni_loop_iteration(cache: JsonCache, cmy: CMY, page, muni_option):
     await year_loop(cache, cmy, page)
 
 async def muni_loop(cache: JsonCache, cmy: CMY, page):
+    # Loop through all available municipalities
     muni_options = await get_options(page, MUNI_SELECT_ID)
     for muni_option in muni_options:
         try:
@@ -162,6 +189,7 @@ async def muni_loop(cache: JsonCache, cmy: CMY, page):
 
 
 async def year_loop_iteration(cache: JsonCache, cmy: CMY, page, year_option):
+    # Perform requisite actions in year loop
     year_option_info = await get_option_info(
         option=year_option,
         valid_labels=YEARS
@@ -179,6 +207,7 @@ async def year_loop_iteration(cache: JsonCache, cmy: CMY, page, year_option):
     cache.mark_as_scraped(cmy=cmy)
 
 async def year_loop(cache: JsonCache, cmy: CMY, page):
+    # Loop through all year options
     year_options = await get_options(page, YEAR_SELECT_ID)
     for year_option in year_options:
         try:
@@ -191,7 +220,10 @@ async def year_loop(cache: JsonCache, cmy: CMY, page):
         ):
             continue
 
-
+async def main(cache: JsonCache):
+    async with async_playwright() as p:
+        page = await load_page(p)
+        await county_loop(cache, page)
 
 if __name__ == "__main__":
     cache = JsonCache("../cache.json")

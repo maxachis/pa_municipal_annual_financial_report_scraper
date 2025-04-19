@@ -1,12 +1,12 @@
 from functools import wraps
 from typing import Optional
 
-from sqlalchemy import create_engine, select, case, func
+from sqlalchemy import create_engine, select, case, func, and_
 from sqlalchemy.orm import sessionmaker, Session
 
 from config import FEDERAL_CODES, STATE_CODES, LOCAL_CODES
 from database_logic.models import Base, AnnualFinancialReportDetails, Code
-from report_creator.data_objects import CMYBreakdownRow
+from report_creator.data_objects import CMYBreakdownRow, AverageRow
 
 
 class DatabaseManager:
@@ -118,4 +118,68 @@ class DatabaseManager:
         all_results = session.execute(query).mappings().all()
 
         return [CMYBreakdownRow(**result) for result in all_results]
+
+
+    @session_manager
+    def get_county_municipality_averages(
+            self,
+            session: Session
+    ) -> list[AverageRow]:
+
+        stmt = (
+            select(
+                AnnualFinancialReportDetails.county,
+                AnnualFinancialReportDetails.municipality,
+                AnnualFinancialReportDetails.year,
+                        func.sum(
+                            case(
+                                (
+                                    AnnualFinancialReportDetails.code.in_(
+                                        FEDERAL_CODES
+                                    ), AnnualFinancialReportDetails.total),
+                                    else_=0
+                            )
+                        ).label("sum_federal"),
+                        func.sum(
+                            case(
+                                (
+                                    AnnualFinancialReportDetails.code.in_(
+                                        STATE_CODES
+                                    ), AnnualFinancialReportDetails.total),
+                                    else_=0
+                            )
+                        ).label("sum_state"),
+                        func.sum(
+                            case(
+                                (
+                                    AnnualFinancialReportDetails.code.in_(
+                                        LOCAL_CODES
+                                    ), AnnualFinancialReportDetails.total),
+                                    else_=0
+                            )
+                        ).label("sum_local"),
+            )
+            .group_by(
+                AnnualFinancialReportDetails.county,
+                AnnualFinancialReportDetails.municipality,
+                AnnualFinancialReportDetails.year
+            )
+            .subquery()
+        )
+
+        final_query = (
+            select(
+                stmt.c.county,
+                stmt.c.municipality,
+                func.avg(stmt.c.sum_federal).label("federal_average"),
+                func.avg(stmt.c.sum_state).label("state_average"),
+                func.avg(stmt.c.sum_local).label("local_average"),
+            )
+            .group_by(stmt.c.county, stmt.c.municipality)
+        )
+
+        all_results = session.execute(final_query).mappings().all()
+
+        return [AverageRow(**result) for result in all_results]
+
 

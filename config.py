@@ -1,4 +1,8 @@
+"""
+Configuration
 
+This file contains various configuration variables for the scraper
+"""
 
 
 

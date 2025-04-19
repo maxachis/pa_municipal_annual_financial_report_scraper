@@ -1,7 +1,12 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 
 class CMYBreakdownRow(BaseModel):
+    """
+    Represents a single row in the breakdown sheet
+    """
     county: str
     municipality: str
     year: str
@@ -11,3 +16,13 @@ class CMYBreakdownRow(BaseModel):
 
     def get_total(self):
         return self.federal_amt + self.state_amt + self.local_amt
+
+class AverageRow(BaseModel):
+    """
+    Represents a single row in the average sheet
+    """
+    county: str
+    municipality: str
+    federal_average: Optional[float] = None
+    state_average: Optional[float] = None
+    local_average: Optional[float] = None

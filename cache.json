@@ -10517,5 +10517,2086 @@
             }
         }
     },
-    "WESTMORELAND": {}
+    "WESTMORELAND": {
+        "ADAMSBURG BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "ALLEGHENY TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "ARNOLD CITY": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "ARONA BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "AVONMORE BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "BELL TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "BOLIVAR BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "COOK TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "DELMONT BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "DERRY BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "DERRY  TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "DONEGAL BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "DONEGAL TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "EAST HUNTINGDON TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "EAST VANDERGRIFT BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "EXPORT BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "FAIRFIELD TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "GREENSBURG CITY": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "HEMPFIELD TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "HUNKER BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "HYDE PARK BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "IRWIN BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "JEANNETTE CITY": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "LATROBE BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "LAUREL MOUNTAIN BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "LIGONIER BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "LIGONIER TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "LOWER BURRELL CITY": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "LOYALHANNA TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "MADISON BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "MANOR BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "MONESSEN CITY": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "MT PLEASANT BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "MT PLEASANT TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "MURRYSVILLE BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "NEW ALEXANDRIA BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": "There is no AFR for the parameters you selected.",
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "NEW FLORENCE BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "NEW KENSINGTON CITY": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "NEW STANTON BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "NORTH BELLE VERNON BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "NORTH HUNTINGDON TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "NORTH IRWIN BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "OKLAHOMA BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "PENN BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "PENN TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "ROSTRAVER TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "SALEM TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "SCOTTDALE BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "SEWARD BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "SEWICKLEY TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "SMITHTON BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "SOUTH GREENSBURG BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "SOUTH HUNTINGDON TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "SOUTHWEST GREENSBURG BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "ST CLAIR TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "SUTERSVILLE BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "TRAFFORD BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "UNITY TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "UPPER BURRELL TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "VANDERGRIFT BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "WASHINGTON TWP": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "WEST LEECHBURG BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "WEST NEWTON BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "YOUNGSTOWN BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        },
+        "YOUNGWOOD BORO": {
+            "2019": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2018": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2017": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2016": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            },
+            "2015": {
+                "scraped": true,
+                "scraper_error": null,
+                "processed": false,
+                "process_error": null
+            }
+        }
+    }
 }

@@ -1,3 +1,9 @@
+"""
+This page contains both the ExcelProcessor class
+and the main function for processing excel files
+
+"""
+
 import re
 
 from openpyxl.reader.excel import load_workbook

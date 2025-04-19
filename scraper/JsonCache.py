@@ -133,6 +133,10 @@ class JsonCache:
         return self.has_scraper_error(cmy, "Timeout")
 
     def get_as_list_of_CMY(self) -> list[CMY]:
+        """
+        Get a list of CMY objects from the cache
+        :return:
+        """
         cmy_list = []
         for county in self.cache.keys():
             for municipality in self.cache[county].keys():
