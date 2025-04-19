@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Integer, Enum
+from sqlalchemy import Column, String, Integer, Enum, Float
 from sqlalchemy.orm import declarative_base, relationship
 
 Base = declarative_base()
@@ -25,3 +25,27 @@ class AnnualFinancialReportDetails(Base):
     code = Column(String, primary_key=True)
     total = Column(Integer, nullable=True)
 
+class JoinedPopDetails(Base):
+    __tablename__ = "joined_pop_details"
+    geo_id = Column(String, primary_key=True)
+    county = Column(String)
+    municipality = Column(String)
+    class_ = Column(String)
+    pop_estimate = Column(Integer)
+    pop_margin = Column(Integer)
+    urban_rural = Column(String)
+
+class IntermediateTable(Base):
+    __tablename__ = "intermediate_table"
+    geo_id = Column(String, primary_key=True)
+    county_downloaded = Column(String)
+    municipality_downloaded = Column(String)
+    county_joined = Column(String)
+    municipality_joined = Column(String)
+    class_ = Column(String)
+    pop_estimate = Column(Integer)
+    pop_margin = Column(Integer)
+    urban_rural = Column(String)
+    federal_average = Column(Float)
+    state_average = Column(Float)
+    local_average = Column(Float)

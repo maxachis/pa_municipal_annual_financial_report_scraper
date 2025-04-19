@@ -3,20 +3,27 @@ Configuration
 
 This file contains various configuration variables for the scraper
 """
-
-
+from openpyxl.xml.constants import REL_NS
 
 """
 Excel Information
 These represent information needed for parsing details from the excel report
 """
 # Sheet Name: The sheet the revenue information is on
-SHEET_NAME = "Sheet3"
+REPORT_RELEVANT_SHEET_NAME = "Sheet3"
+JOINED_POP_RELEVANT_SHEET_NAME = "Sheet1"
 # Column Names: The column values (1-indexed) for the code, label, and total
-CODE_COLUMN = 1
-LABEL_COLUMN = 2
-TOTAL_COLUMN = 10
+REL_CODE_COLUMN = 1
+REL_LABEL_COLUMN = 2
+REL_TOTAL_COLUMN = 10
 
+JOINED_GEO_COLUMN=1
+JOINED_MUNI_COLUMN=2
+JOINED_COUNTY_COLUMN=3
+JOINED_CLASS_COLUMN=5
+JOINED_POP_ESTIMATE_COLUMN=6
+JOINED_POP_MARGIN_COLUMN=7
+JOINED_URBAN_RURAL_COLUMN=8
 """
 Scraper Information
 
