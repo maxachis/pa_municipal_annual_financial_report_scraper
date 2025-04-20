@@ -31,3 +31,9 @@ python pa_municipal_annual_financial_report_scraper.py
   - The data processed are the totals defined in each row on "Sheet3" of the excel spreadsheet
 - The `database_logic` uses SQLAlchemy to query the database
 - The `report_creator` takes the data from the database and creates an Excel report
+
+## Steps
+1. Run `/scraper/main.py` until all reports are downloaded
+2. Run `/excel_processor/main.py` until all reports are processed
+3. Run `/database_logic/build_intermediate_table.py` to create an intermediate table
+4. Run `/report_creator/main.py` to create the final report
