@@ -5,6 +5,7 @@ and the main function for processing excel files
 """
 
 import re
+from pathlib import Path
 
 from openpyxl.reader.excel import load_workbook
 from openpyxl.workbook import Workbook
@@ -13,15 +14,17 @@ from sqlalchemy.exc import IntegrityError
 
 from config import REPORT_RELEVANT_SHEET_NAME, REL_TOTAL_COLUMN, REL_CODE_COLUMN, REL_LABEL_COLUMN, \
     JOINED_POP_RELEVANT_SHEET_NAME, JOINED_GEO_COLUMN, JOINED_MUNI_COLUMN, JOINED_COUNTY_COLUMN, JOINED_CLASS_COLUMN, \
-    JOINED_POP_ESTIMATE_COLUMN, JOINED_URBAN_RURAL_COLUMN
+    JOINED_POP_ESTIMATE_COLUMN, JOINED_URBAN_RURAL_COLUMN, JOINED_POP_MARGIN_COLUMN
 from database_logic.DatabaseManager import DatabaseManager
+from database_logic.models import JoinedPopDetails
 from scraper.JsonCache import JsonCache
 from scraper.data_objects import CMY
+from util import project_path
 
 MAX_ROW = 1000
 VALID_ROW_REGEX = r"^[\d\-\.]+$"  # Regex for row containing only numbers, decimals, and hyphens
 
-def open_excel_file(file_path: str) -> Workbook:
+def open_excel_file(file_path: Path) -> Workbook:
     return load_workbook(file_path)
 
 def case_insensitive_replace(text, old, new):
@@ -35,7 +38,7 @@ class ExcelProcessor:
 
     def __init__(self):
         self.database_manager = DatabaseManager()
-        self.cache = JsonCache("cache.json")
+        self.cache = JsonCache()
         self.cache.load_cache()
 
     def process_downloaded_reports(self):
@@ -50,7 +53,12 @@ class ExcelProcessor:
                 self.cache.add_process_error(cmy, str(e))
 
     def get_downloaded_report(self, cmy: CMY) -> Workbook:
-        return open_excel_file(f"downloads/report_{cmy.county}_{cmy.municipality}_{cmy.year}.xlsx")
+        return open_excel_file(
+            file_path=project_path(
+                "downloads",
+                f"report_{cmy.county}_{cmy.municipality}_{cmy.year}.xlsx"
+            )
+        )
 
     def process_downloaded_report(self, wb: Workbook, cmy: CMY):
         # Get sheet
@@ -92,6 +100,7 @@ class ExcelProcessor:
             return case_insensitive_replace(municipality, term, "")
 
     def process_joined_pop_class_urban_rural(self):
+        self.database_manager.wipe_table(JoinedPopDetails)
         wb = open_excel_file("Joined pop class urban rural.xlsx")
 
 
@@ -108,7 +117,7 @@ class ExcelProcessor:
             county = self.clean_county(county)
             class_ = row[JOINED_CLASS_COLUMN - 1]
             pop_estimate = row[JOINED_POP_ESTIMATE_COLUMN - 1]
-            pop_margin = row[JOINED_POP_ESTIMATE_COLUMN - 1]
+            pop_margin = row[JOINED_POP_MARGIN_COLUMN - 1]
             rural_urban = row[JOINED_URBAN_RURAL_COLUMN - 1]
             try:
                 self.database_manager.add_pop_row(

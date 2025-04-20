@@ -19,6 +19,8 @@ from pydantic import BaseModel, Field
 
 from config import YEARS
 from scraper.data_objects import CMY
+from util import project_path
+
 
 class CacheObject(BaseModel):
     """
@@ -48,8 +50,8 @@ class JsonCache:
     A cache class for storing and retrieving data from a JSON file.
     """
 
-    def __init__(self, filename: str):
-        self.filename = filename
+    def __init__(self):
+        self.path = project_path("cache.json")
         self.cache = {}
 
     def update_entry(self, cmy: CMY, data: Any):
@@ -77,14 +79,14 @@ class JsonCache:
 
     def save_cache(self):
         """Save the cache to a JSON file."""
-        with open(self.filename, 'w', encoding='utf-8') as f:
+        with open(self.path, 'w', encoding='utf-8') as f:
             json.dump(self.cache, f, ensure_ascii=False, indent=4)
 
     def load_cache(self):
         """Load the cache from a JSON file."""
-        path = Path(self.filename)
+        path = Path(self.path)
         if path.exists():
-            with open(self.filename, 'r', encoding='utf-8') as f:
+            with open(self.path, 'r', encoding='utf-8') as f:
                 self.cache = json.load(f)
         else:
             self.cache = {}
@@ -157,8 +159,9 @@ class JsonCache:
         self.save_cache()
 
 # Uncomment to reset county of choice
-if __name__ == "__main__":
-    cache = JsonCache("../cache.json")
-    cache.load_cache()
-    cache.county_reset("WESTMORELAND")
-    cache.save_cache()
+# if __name__ == "__main__":
+
+#     cache = JsonCache()
+#     cache.load_cache()
+#     cache.county_reset("WESTMORELAND")
+#     cache.save_cache()

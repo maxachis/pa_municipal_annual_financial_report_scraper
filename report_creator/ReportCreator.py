@@ -6,7 +6,7 @@ as well as a main method which operates the class
 from openpyxl.workbook import Workbook
 
 from database_logic.DatabaseManager import DatabaseManager
-from report_creator.data_objects import CMYBreakdownRow, AverageRow
+from report_creator.data_objects import CMYBreakdownRow, AverageRow, AverageWithPopRow
 
 
 class ReportCreator:
@@ -55,7 +55,7 @@ class ReportCreator:
 
 
 
-    def average_sheet(self, average_rows: list[AverageRow]):
+    def average_sheet(self, average_rows: list[AverageWithPopRow]):
         """
         Creates the average sheet
         :param average_rows:
@@ -67,6 +67,10 @@ class ReportCreator:
             [
                 "County",
                 "Municipality",
+                "Class",
+                "Population Estimate",
+                "Population Margin",
+                "Urban/Rural",
                 "Federal Average",
                 "State Average",
                 "Local Average",
@@ -78,6 +82,10 @@ class ReportCreator:
                 [
                     row.county,
                     row.municipality,
+                    row.class_,
+                    row.pop_estimate,
+                    row.pop_margin,
+                    row.urban_rural,
                     row.federal_average,
                     row.state_average,
                     row.local_average,
@@ -90,7 +98,7 @@ if __name__ == "__main__":
     # And retrieve necessary data from the database
     dm = DatabaseManager()
     rows = dm.get_row_breakdowns()
-    average_rows = dm.get_county_municipality_averages()
+    average_rows = dm.get_average_with_pop_rows()
 
     # Initialize the report creator and create all sheets
     rc = ReportCreator("report.xlsx")

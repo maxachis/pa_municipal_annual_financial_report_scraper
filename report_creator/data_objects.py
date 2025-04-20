@@ -26,3 +26,9 @@ class AverageRow(BaseModel):
     federal_average: Optional[float] = None
     state_average: Optional[float] = None
     local_average: Optional[float] = None
+
+class AverageWithPopRow(AverageRow):
+    pop_estimate: int
+    pop_margin: int
+    urban_rural: str
+    class_: str

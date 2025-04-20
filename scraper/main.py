@@ -14,6 +14,7 @@ from constants import DISPLAY_REPORT_ID, YEAR_SELECT_ID, MUNI_SELECT_ID, COUNTY_
 from config import COUNTIES, YEARS
 from data_objects import CMY, OptionInfo
 from exceptions import NoAFRException, InvalidOptionException, EntryExistsException
+from util import project_path
 
 
 async def trigger_download(page):
@@ -127,9 +128,9 @@ async def wait(page):
 
 async def save_download(download, cmy: CMY):
     # Save the downloaded file to a specific path
-    file_name = f"downloads/report_{cmy.county}_{cmy.municipality}_{cmy.year}.xlsx"
-    print(f"Saving report to {file_name}")
-    await download.save_as(file_name)
+    path = project_path("downloads", f"report_{cmy.county}_{cmy.municipality}_{cmy.year}.xlsx")
+    print(f"Saving report to {path}")
+    await download.save_as(path)
 
 async def get_option_value(option):
     return await option.get_attribute("value")
@@ -226,7 +227,7 @@ async def main(cache: JsonCache):
         await county_loop(cache, page)
 
 if __name__ == "__main__":
-    cache = JsonCache("../cache.json")
+    cache = JsonCache()
     cache.load_cache()
     max_additional_attempts = 0
     for i in range(max_additional_attempts):

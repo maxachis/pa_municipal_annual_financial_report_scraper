@@ -2,14 +2,14 @@ from functools import wraps
 from typing import Optional
 
 from rapidfuzz.fuzz import ratio
-from sqlalchemy import create_engine, select, case, func, and_
-from sqlalchemy.exc import IntegrityError
+from sqlalchemy import create_engine, select, case, func, Select
 from sqlalchemy.orm import sessionmaker, Session
 
 from config import FEDERAL_CODES, STATE_CODES, LOCAL_CODES
 from database_logic.database_objects import PopRow
 from database_logic.models import Base, AnnualFinancialReportDetails, Code, JoinedPopDetails, IntermediateTable
-from report_creator.data_objects import CMYBreakdownRow, AverageRow
+from report_creator.data_objects import CMYBreakdownRow, AverageRow, AverageWithPopRow
+from util import project_path
 
 
 class DatabaseManager:
@@ -18,7 +18,8 @@ class DatabaseManager:
     It utilizes SQLAlchemy to interact with the database.
     """
     def __init__(self):
-        self.engine = create_engine('sqlite:///database.db')
+        path = project_path("database.db")
+        self.engine = create_engine(f"sqlite:///{path}")
         Base.metadata.create_all(self.engine)
         self.session_maker = sessionmaker(bind=self.engine, expire_on_commit=False)
 
@@ -238,11 +239,68 @@ class DatabaseManager:
         )
 
     @session_manager
+    def wipe_table(self, session: Session, model) -> None:
+        session.query(model).delete()
+
+    @session_manager
+    def get_average_with_pop_rows(self, session: Session) -> list[AverageWithPopRow]:
+        query = Select(IntermediateTable)
+        results = session.execute(query).scalars().all()
+        final_results = []
+        for result in results:
+            row = AverageWithPopRow(
+                county=result.county_downloaded,
+                municipality=result.municipality_downloaded,
+                federal_average=result.federal_average,
+                state_average=result.state_average,
+                local_average=result.local_average,
+                pop_estimate=result.pop_estimate,
+                pop_margin=result.pop_margin,
+                urban_rural=result.urban_rural,
+                class_=result.class_
+            )
+            final_results.append(row)
+
+        return final_results
+
+
+    @session_manager
     def build_intermediate_table(self, session: Session) -> None:
+        """
+        Build an intermediate table based on fuzzy string matching
+        First by finding the county that is the best match
+        Then by finding the best municipality within that county
+        :param session:
+        :return:
+        """
+
+
         average_rows = self.get_county_municipality_averages()
 
         for average_row in average_rows:
-            pop_row = self.get_best_fuzzy_match(session, average_row.county, average_row.municipality)
+            # First, get best county match
+            county = average_row.county
+            municipality = average_row.municipality
+            def score_county(row: JoinedPopDetails):
+                return ratio(row.county.strip().upper(), county.strip().upper())
+
+            def score_municipality(row: JoinedPopDetails):
+                return ratio(row.municipality.strip().upper(), municipality.strip().upper())
+
+            result = session.execute(select(JoinedPopDetails))
+            rows = result.scalars().all()
+
+            best_county_row = max(rows, key=score_county)
+
+            # Then, get best municipality match
+            result = session.execute(
+                select(JoinedPopDetails).
+                where(JoinedPopDetails.county == best_county_row.county)
+            )
+            rows = result.scalars().all()
+
+            pop_row = max(rows, key=score_municipality)
+
 
             session.add(
                 IntermediateTable(

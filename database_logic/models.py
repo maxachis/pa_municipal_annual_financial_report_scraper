@@ -38,10 +38,10 @@ class JoinedPopDetails(Base):
 class IntermediateTable(Base):
     __tablename__ = "intermediate_table"
     geo_id = Column(String, primary_key=True)
-    county_downloaded = Column(String)
-    municipality_downloaded = Column(String)
-    county_joined = Column(String)
-    municipality_joined = Column(String)
+    county_downloaded = Column(String, primary_key=True)
+    municipality_downloaded = Column(String, primary_key=True)
+    county_joined = Column(String, primary_key=True)
+    municipality_joined = Column(String, primary_key=True)
     class_ = Column(String)
     pop_estimate = Column(Integer)
     pop_margin = Column(Integer)
