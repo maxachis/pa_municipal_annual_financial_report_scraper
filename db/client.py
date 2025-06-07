@@ -6,23 +6,26 @@ from sqlalchemy import create_engine, select, case, func, Select, or_
 from sqlalchemy.orm import sessionmaker, Session
 
 from config import FEDERAL_CODES, STATE_CODES, LOCAL_CODES, FEDERAL_PREFIX, STATE_PREFIX, LOCAL_PREFIX
-from db.models.pydantic import PopRow
-from db.models.sqlalchemy import Base, AnnualFinancialReportDetails, Code, JoinedPopDetails, IntermediateTable
+from db.models.pydantic.cache_entry import CacheEntry
+from db.models.pydantic.pop_row import PopRow
+from db.models.sqlalchemy.models_old import AnnualFinancialReportDetails, Code, JoinedPopDetails, IntermediateTable
+from db.models.sqlalchemy.base import Base
+from db.queries.instantiations.convert_state_to_db import ConvertStateToDBQueryBuilder
 from report_creator.data_objects import CMYBreakdownRow, AverageRow, AverageWithPopRow
 from util import project_path
 
 
-class DatabaseManager:
+class DatabaseClient:
     """
-    The database manager is the primary interface for the SQLite database.
+    The database client is the primary interface for the SQLite database.
     It utilizes SQLAlchemy to interact with the database.
     """
+
     def __init__(self):
         path = project_path("database.db")
         self.engine = create_engine(f"sqlite:///{path}")
         Base.metadata.create_all(self.engine)
         self.session_maker = sessionmaker(bind=self.engine, expire_on_commit=False)
-
 
     @staticmethod
     def session_manager(method):
@@ -46,8 +49,6 @@ class DatabaseManager:
         code_label = session.query(Code).filter_by(code=code).first()
         return code_label is not None
 
-
-
     @session_manager
     def add_code_label(self, session: Session, code: str, label: str):
         code_label = Code(code=code, label=label)
@@ -55,15 +56,15 @@ class DatabaseManager:
 
     @session_manager
     def add_pop_row(
-            self,
-            session: Session,
-            geo_id: str,
-            county: str,
-            municipality: str,
-            class_: str,
-            pop_estimate: int,
-            pop_margin: int,
-            urban_rural: str
+        self,
+        session: Session,
+        geo_id: str,
+        county: str,
+        municipality: str,
+        class_: str,
+        pop_estimate: int,
+        pop_margin: int,
+        urban_rural: str
     ):
         pop_row = JoinedPopDetails(
             geo_id=geo_id,
@@ -78,13 +79,13 @@ class DatabaseManager:
 
     @session_manager
     def add_to_annual_financial_report_details_table(
-            self,
-            session: Session,
-            county: str,
-            municipality: str,
-            year: str,
-            code: str,
-            total: Optional[int]
+        self,
+        session: Session,
+        county: str,
+        municipality: str,
+        year: str,
+        code: str,
+        total: Optional[int]
     ):
         details = AnnualFinancialReportDetails(
             county=county,
@@ -146,11 +147,10 @@ class DatabaseManager:
 
         return [CMYBreakdownRow(**result) for result in all_results]
 
-
     @session_manager
     def get_county_municipality_averages(
-            self,
-            session: Session
+        self,
+        session: Session
     ) -> list[AverageRow]:
 
         stmt = (
@@ -158,33 +158,33 @@ class DatabaseManager:
                 AnnualFinancialReportDetails.county,
                 AnnualFinancialReportDetails.municipality,
                 AnnualFinancialReportDetails.year,
-                        func.sum(
-                            case(
-                                (
-                                    AnnualFinancialReportDetails.code.in_(
-                                        FEDERAL_CODES
-                                    ), AnnualFinancialReportDetails.total),
-                                    else_=0
-                            )
-                        ).label("sum_federal"),
-                        func.sum(
-                            case(
-                                (
-                                    AnnualFinancialReportDetails.code.in_(
-                                        STATE_CODES
-                                    ), AnnualFinancialReportDetails.total),
-                                    else_=0
-                            )
-                        ).label("sum_state"),
-                        func.sum(
-                            case(
-                                (
-                                    AnnualFinancialReportDetails.code.in_(
-                                        LOCAL_CODES
-                                    ), AnnualFinancialReportDetails.total),
-                                    else_=0
-                            )
-                        ).label("sum_local"),
+                func.sum(
+                    case(
+                        (
+                            AnnualFinancialReportDetails.code.in_(
+                                FEDERAL_CODES
+                            ), AnnualFinancialReportDetails.total),
+                        else_=0
+                    )
+                ).label("sum_federal"),
+                func.sum(
+                    case(
+                        (
+                            AnnualFinancialReportDetails.code.in_(
+                                STATE_CODES
+                            ), AnnualFinancialReportDetails.total),
+                        else_=0
+                    )
+                ).label("sum_state"),
+                func.sum(
+                    case(
+                        (
+                            AnnualFinancialReportDetails.code.in_(
+                                LOCAL_CODES
+                            ), AnnualFinancialReportDetails.total),
+                        else_=0
+                    )
+                ).label("sum_local"),
             )
             .group_by(
                 AnnualFinancialReportDetails.county,
@@ -210,10 +210,10 @@ class DatabaseManager:
         return [AverageRow(**result) for result in all_results]
 
     def get_best_fuzzy_match(
-            self,
-            session: Session,
-            county: str,
-            municipality: str
+        self,
+        session: Session,
+        county: str,
+        municipality: str
     ) -> PopRow:
         # Fetch all rows from the table
         result = session.execute(select(JoinedPopDetails))
@@ -222,8 +222,8 @@ class DatabaseManager:
         # Define a scoring function using rapidfuzz
         def score(row: JoinedPopDetails):
             return (
-                    ratio(row.county, county) +
-                    ratio(row.municipality, municipality)
+                ratio(row.county, county) +
+                ratio(row.municipality, municipality)
             )
 
         # Get the row with the highest combined score
@@ -263,7 +263,6 @@ class DatabaseManager:
 
         return final_results
 
-
     @session_manager
     def build_intermediate_table(self, session: Session) -> None:
         """
@@ -274,13 +273,13 @@ class DatabaseManager:
         :return:
         """
 
-
         average_rows = self.get_county_municipality_averages()
 
         for average_row in average_rows:
             # First, get best county match
             county = average_row.county
             municipality = average_row.municipality
+
             def score_county(row: JoinedPopDetails):
                 return ratio(row.county.strip().upper(), county.strip().upper())
 
@@ -301,10 +300,9 @@ class DatabaseManager:
 
             pop_row = max(rows, key=score_municipality)
 
-
             session.add(
                 IntermediateTable(
-                   geo_id=pop_row.geo_id,
+                    geo_id=pop_row.geo_id,
                     county_downloaded=average_row.county,
                     municipality_downloaded=average_row.municipality,
                     county_joined=pop_row.county,
@@ -318,3 +316,12 @@ class DatabaseManager:
                     local_average=average_row.local_average
                 )
             )
+
+    @session_manager
+    def convert_state_to_db(
+        self,
+        session: Session,
+        entries: list[CacheEntry]
+    ) -> None:
+        query_builder = ConvertStateToDBQueryBuilder(entries)
+        query_builder.run(session)

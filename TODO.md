@@ -1,0 +1,9 @@
+- [] Create first migration script setting up new tables
+- [] Import state data
+- [] Create second migration script migrating data 
+- [] Confirm migration went right, else eliminate
+- [] Create third migration script removing old tables
+- [] Inspect the municipalities missing data
+- [] Remove the offending entries from the database
+- [] Reprocess using new script based on state 
+- 

@@ -15,8 +15,8 @@ from sqlalchemy.exc import IntegrityError
 from config import REPORT_RELEVANT_SHEET_NAME, REL_TOTAL_COLUMN, REL_CODE_COLUMN, REL_LABEL_COLUMN, \
     JOINED_POP_RELEVANT_SHEET_NAME, JOINED_GEO_COLUMN, JOINED_MUNI_COLUMN, JOINED_COUNTY_COLUMN, JOINED_CLASS_COLUMN, \
     JOINED_POP_ESTIMATE_COLUMN, JOINED_URBAN_RURAL_COLUMN, JOINED_POP_MARGIN_COLUMN
-from db.DatabaseManager import DatabaseManager
-from db.models.sqlalchemy import JoinedPopDetails
+from db.client import DatabaseClient
+from db.models.sqlalchemy.models_old import JoinedPopDetails
 from scraper.JsonCache import JsonCache
 from scraper.data_objects import CMY
 from util import project_path
@@ -37,7 +37,7 @@ class ExcelProcessor:
     """
 
     def __init__(self):
-        self.database_manager = DatabaseManager()
+        self.database_manager = DatabaseClient()
         self.cache = JsonCache()
         self.cache.load_cache()
 

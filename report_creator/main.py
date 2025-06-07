@@ -1,10 +1,10 @@
-from db.DatabaseManager import DatabaseManager
+from db.client import DatabaseClient
 from report_creator.ReportCreator import ReportCreator
 
 if __name__ == "__main__":
     # Initialize the database manager
     # And retrieve necessary data from the database
-    dm = DatabaseManager()
+    dm = DatabaseClient()
     rows = dm.get_row_breakdowns()
     average_rows = dm.get_average_with_pop_rows()
 
