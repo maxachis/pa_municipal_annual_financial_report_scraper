@@ -1,4 +1,4 @@
-from database_logic.DatabaseManager import DatabaseManager
+from db.DatabaseManager import DatabaseManager
 from report_creator.ReportCreator import ReportCreator
 
 if __name__ == "__main__":

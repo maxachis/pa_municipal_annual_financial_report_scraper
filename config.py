@@ -51,6 +51,7 @@ Code Classification
 Classifies codes according to whether they are federal, state, or local
 This is used when determining the total for each code
 """
+FEDERAL_PREFIX = "351"
 FEDERAL_CODES = [
     '351.01',
     '351.02',
@@ -67,6 +68,7 @@ FEDERAL_CODES = [
     '351.13',
     '351.XX'
 ]
+STATE_PREFIX = "354"
 STATE_CODES = [
     '354.01',
     '354.02',
@@ -86,7 +88,7 @@ STATE_CODES = [
     '354.XX',
     '355.08'
 ]
-
+LOCAL_PREFIX = "357"
 LOCAL_CODES = [
     '357.01',
     '357.02',

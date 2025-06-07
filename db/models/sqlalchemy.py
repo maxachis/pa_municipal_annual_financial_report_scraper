@@ -1,7 +1,25 @@
-from sqlalchemy import Column, String, Integer, Enum, Float
+from sqlalchemy import Column, String, Integer, Enum, Float, DateTime, func, ForeignKey
 from sqlalchemy.orm import declarative_base, relationship
 
 Base = declarative_base()
+
+class StandardBase(Base):
+    __abstract__ = True
+
+    id = Column(Integer, primary_key=True, index=True)
+    created_at = Column(DateTime, default=func.now())
+
+class County(StandardBase):
+    __tablename__ = "counties"
+    name = Column(String, unique=True)
+
+class Municipality(StandardBase):
+    __tablename__ = "municipalities"
+    name = Column(String, unique=True)
+    county_id = Column(Integer, ForeignKey("counties.id"))
+
+    county = relationship("County", back_populates="municipalities")
+
 
 class Code(Base):
     """

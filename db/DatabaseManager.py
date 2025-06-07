@@ -2,12 +2,12 @@ from functools import wraps
 from typing import Optional
 
 from rapidfuzz.fuzz import ratio
-from sqlalchemy import create_engine, select, case, func, Select
+from sqlalchemy import create_engine, select, case, func, Select, or_
 from sqlalchemy.orm import sessionmaker, Session
 
-from config import FEDERAL_CODES, STATE_CODES, LOCAL_CODES
-from database_logic.database_objects import PopRow
-from database_logic.models import Base, AnnualFinancialReportDetails, Code, JoinedPopDetails, IntermediateTable
+from config import FEDERAL_CODES, STATE_CODES, LOCAL_CODES, FEDERAL_PREFIX, STATE_PREFIX, LOCAL_PREFIX
+from db.models.pydantic import PopRow
+from db.models.sqlalchemy import Base, AnnualFinancialReportDetails, Code, JoinedPopDetails, IntermediateTable
 from report_creator.data_objects import CMYBreakdownRow, AverageRow, AverageWithPopRow
 from util import project_path
 
@@ -105,9 +105,7 @@ class DatabaseManager:
                 func.sum(
                     case(
                         (
-                            AnnualFinancialReportDetails.code.in_(
-                                FEDERAL_CODES
-                            ),
+                            AnnualFinancialReportDetails.code.like(f"{FEDERAL_PREFIX}%"),
                             AnnualFinancialReportDetails.total
                         ),
                         else_=0)
@@ -115,9 +113,13 @@ class DatabaseManager:
                 func.sum(
                     case(
                         (
-                            AnnualFinancialReportDetails.code.in_(
-                                STATE_CODES
-                            ),
+                            or_(
+                                AnnualFinancialReportDetails.code.in_(
+                                    STATE_CODES
+                                ),
+                                AnnualFinancialReportDetails.code.like(f"{STATE_PREFIX}%")
+                            )
+                            ,
                             AnnualFinancialReportDetails.total
                         ),
                         else_=0
@@ -126,9 +128,7 @@ class DatabaseManager:
                 func.sum(
                     case(
                         (
-                            AnnualFinancialReportDetails.code.in_(
-                                LOCAL_CODES
-                            ),
+                            AnnualFinancialReportDetails.code.like(f"{LOCAL_PREFIX}%"),
                             AnnualFinancialReportDetails.total
                         ),
                         else_=0
