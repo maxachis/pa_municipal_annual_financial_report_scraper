@@ -16,7 +16,9 @@ from config import REPORT_RELEVANT_SHEET_NAME, REL_TOTAL_COLUMN, REL_CODE_COLUMN
     JOINED_POP_RELEVANT_SHEET_NAME, JOINED_GEO_COLUMN, JOINED_MUNI_COLUMN, JOINED_COUNTY_COLUMN, JOINED_CLASS_COLUMN, \
     JOINED_POP_ESTIMATE_COLUMN, JOINED_URBAN_RURAL_COLUMN, JOINED_POP_MARGIN_COLUMN
 from db.client import DatabaseClient
-from db.models.sqlalchemy.models_old import JoinedPopDetails
+from db.models.pydantic.pop_row import PopRow
+from db.models.sqlalchemy.enums import LocationType
+from db.models.sqlalchemy.instantiations import JoinedPopDetailsV2
 from scraper.JsonCache import JsonCache
 from scraper.data_objects import CMY
 from util import project_path
@@ -100,37 +102,40 @@ class ExcelProcessor:
             return case_insensitive_replace(municipality, term, "")
 
     def process_joined_pop_class_urban_rural(self):
-        self.database_manager.wipe_table(JoinedPopDetails)
+        self.database_manager.wipe_table(JoinedPopDetailsV2)
         wb = open_excel_file("Joined pop class urban rural.xlsx")
 
 
         ws: Worksheet = wb[JOINED_POP_RELEVANT_SHEET_NAME]
+        pop_rows = []
         for row in ws.iter_rows(min_row=2, max_row=MAX_ROW, min_col=1, max_col=8, values_only=True):
             if row[0] is None:
                 continue
             if row[0].strip() == "":
                 continue
+            location_type = LocationType(row[JOINED_URBAN_RURAL_COLUMN - 1])
+            if location_type == LocationType.NA:
+                continue
+
             geo = row[JOINED_GEO_COLUMN - 1]
             muni = row[JOINED_MUNI_COLUMN - 1]
-            muni = self.clean_municipality(muni)
+            # muni = self.clean_municipality(muni)
             county = row[JOINED_COUNTY_COLUMN - 1]
             county = self.clean_county(county)
             class_ = row[JOINED_CLASS_COLUMN - 1]
             pop_estimate = row[JOINED_POP_ESTIMATE_COLUMN - 1]
             pop_margin = row[JOINED_POP_MARGIN_COLUMN - 1]
-            rural_urban = row[JOINED_URBAN_RURAL_COLUMN - 1]
-            try:
-                self.database_manager.add_pop_row(
-                    geo_id=geo,
-                    county=county,
-                    municipality=muni,
-                    class_=class_,
-                    pop_estimate=pop_estimate,
-                    pop_margin=pop_margin,
-                    urban_rural=rural_urban
-                )
-            except IntegrityError:
-                pass
+            pop_row = PopRow(
+                geo_id=geo,
+                county=county,
+                municipality=muni,
+                class_=class_,
+                pop_estimate=pop_estimate,
+                pop_margin=pop_margin,
+                location_type=location_type
+            )
+            pop_rows.append(pop_row)
+        self.database_manager.add_pop_rows(pop_rows)
 
 
 
@@ -138,5 +143,5 @@ class ExcelProcessor:
 
 if __name__ == "__main__":
     processor = ExcelProcessor()
-    processor.process_downloaded_reports()
+    # processor.process_downloaded_reports()
     processor.process_joined_pop_class_urban_rural()

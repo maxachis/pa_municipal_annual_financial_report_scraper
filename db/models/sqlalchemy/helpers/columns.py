@@ -14,6 +14,7 @@ def enum_column(
             cast(type[PyEnum], enum_),
             name=name,
             native_enum=True,
-            validate_strings=True
+            validate_strings=True,
+            values_callable=lambda x: [e.value for e in x]
         )
     )

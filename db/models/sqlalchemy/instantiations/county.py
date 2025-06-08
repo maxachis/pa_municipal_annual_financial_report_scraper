@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String
+from sqlalchemy import Column, String, UniqueConstraint
 from sqlalchemy.orm import relationship
 
 from db.models.sqlalchemy.base import StandardBase
@@ -6,7 +6,13 @@ from db.models.sqlalchemy.base import StandardBase
 
 class County(StandardBase):
     __tablename__ = "counties"
-    name = Column(String, unique=True)
+    __table_args__ = (
+        UniqueConstraint(
+            "name",
+            name="county_uq_name"
+        ),
+    )
+    name = Column(String)
 
     municipalities = relationship(
         "Municipality",

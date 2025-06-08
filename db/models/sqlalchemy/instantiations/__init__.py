@@ -8,6 +8,9 @@ from .county import County
 from .municipality import Municipality
 from .process_info import ProcessInfo
 from .scrape_info import ScrapeInfo
+from .code import CodeV2
+from .report_details import ReportDetails
+from .joined_pop_details import JoinedPopDetailsV2
 
 
 __all__ = [
@@ -19,4 +22,7 @@ __all__ = [
     'Municipality',
     'ProcessInfo',
     'ScrapeInfo',
+    'CodeV2',
+    'ReportDetails',
+    'JoinedPopDetailsV2'
 ]

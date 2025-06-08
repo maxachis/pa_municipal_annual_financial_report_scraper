@@ -13,5 +13,5 @@ class ProcessInfo(
         UniqueConstraint(
             "report_id",
             name="process_info_uq_report"
-        )
+        ),
     )

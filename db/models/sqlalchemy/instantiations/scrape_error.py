@@ -8,7 +8,7 @@ class ScrapeError(
     StandardBase,
     AnnualReportMixin
 ):
-    __table_name__ = "scrape_error"
+    __tablename__ = "scrape_errors"
     __table_args__ = (
         UniqueConstraint(
             "report_id",

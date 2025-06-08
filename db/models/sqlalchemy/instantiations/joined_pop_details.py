@@ -3,7 +3,7 @@ from sqlalchemy.orm import Mapped
 
 from db.models.sqlalchemy.base import StandardBase
 from db.models.sqlalchemy.enums import LocationType
-from db.models.sqlalchemy.helpers import enum_column
+from db.models.sqlalchemy.helpers.columns import enum_column
 from db.models.sqlalchemy.mixins import MunicipalityMixin, CountyMixin
 
 
@@ -26,10 +26,10 @@ class JoinedPopDetailsV2(
     )
 
     geo_id = Column(String, primary_key=True)
-    class_ = Column(String)
+    class_ = Column('class', String, key="class_")
     pop_estimate = Column(Integer)
     pop_margin = Column(Integer)
     location_type: Mapped[LocationType] = enum_column(
         enum_=LocationType,
-        name="location_type"
+        name="location_type_enum"
     )

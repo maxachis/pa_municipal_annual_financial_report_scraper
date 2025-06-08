@@ -37,7 +37,7 @@ class ConvertStateToDBQueryBuilder(QueryBuilder):
             county: None
             for county in
             set(
-                [entry.county for entry in entries]
+                [entry.county_name for entry in entries]
             )
         }
 
@@ -48,10 +48,10 @@ class ConvertStateToDBQueryBuilder(QueryBuilder):
         d = {}
         for entry in entries:
             # Layer 1: Counties
-            if entry.county not in d:
-                d[entry.county] = {}
+            if entry.county_name not in d:
+                d[entry.county_name] = {}
             # Layer 2: Municipalities
-            d[entry.county][entry.municipality] = None
+            d[entry.county_name][entry.municipality_name] = None
         return d
 
     @staticmethod
@@ -61,13 +61,13 @@ class ConvertStateToDBQueryBuilder(QueryBuilder):
         d = {}
         for entry in entries:
             # Layer 1: Counties
-            if entry.county not in d:
-                d[entry.county] = {}
+            if entry.county_name not in d:
+                d[entry.county_name] = {}
             # Layer 2: Municipalities
-            if entry.municipality not in d[entry.county]:
-                d[entry.county][entry.municipality] = {}
+            if entry.municipality_name not in d[entry.county_name]:
+                d[entry.county_name][entry.municipality_name] = {}
             # Layer 3: Years
-            d[entry.county][entry.municipality][entry.year] = None
+            d[entry.county_name][entry.municipality_name][entry.year] = None
         return d
 
     def get_county_ids(
@@ -145,7 +145,7 @@ class ConvertStateToDBQueryBuilder(QueryBuilder):
                 select(AnnualReport.id)
                 .where(
                     AnnualReport.county_id == county_id,
-                    AnnualReport.municipality_id == muni_name,
+                    AnnualReport.municipality_id == muni_id,
                     AnnualReport.year == year_
                 )
             )

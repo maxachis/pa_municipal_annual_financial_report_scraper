@@ -1,19 +1,28 @@
 from sqlalchemy import Column, Integer, ForeignKey
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, declared_attr, Mapped
 
 
 class CountyMixin:
     county_id = Column(Integer, ForeignKey("counties.id"))
 
-    county = relationship("County")
+    @declared_attr
+    def county(cls) -> Mapped["County"]:
+        return relationship("County")
+
 
 class MunicipalityMixin:
     municipality_id = Column(Integer, ForeignKey("municipalities.id"))
 
-    municipality = relationship("Municipality")
+
+    @declared_attr
+    def municipality(self) -> Mapped["Municipality"]:
+        return relationship("Municipality")
 
 class AnnualReportMixin:
-    report_id = Column(Integer, ForeignKey("reports.id"))
+    report_id = Column(Integer, ForeignKey("annual_reports.id"))
 
-    report = relationship("AnnualReport")
+    @declared_attr
+    def report(self) -> Mapped["AnnualReport"]:
+        return relationship("AnnualReport")
+
 

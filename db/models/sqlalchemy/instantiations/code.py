@@ -1,10 +1,16 @@
-from sqlalchemy import String, Column
+from sqlalchemy import String, Column, UniqueConstraint
 
 from db.models.sqlalchemy.base import StandardBase
 
 
 class CodeV2(StandardBase):
     __tablename__ = 'codes_v2'
+    __table_args__ = (
+        UniqueConstraint(
+            'code',
+            name='code_uq_code'
+        ),
+    )
 
     code = Column(String, primary_key=True)
     label = Column(String)

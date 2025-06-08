@@ -29,7 +29,7 @@ python pa_municipal_annual_financial_report_scraper.py
 - The `scraper` uses Playwright to navigate to the website and download reports as excel files for all specified municipalities and years
 - The `excel_processor` processes the excel files and stores the data in a sqlite database, using SQLAlchemy to interface with the database
   - The data processed are the totals defined in each row on "Sheet3" of the excel spreadsheet
-- The `database_logic` uses SQLAlchemy to query the database
+- The `db` directory uses SQLAlchemy to query the database
 - The `report_creator` takes the data from the database and creates an Excel report
 
 ## Steps

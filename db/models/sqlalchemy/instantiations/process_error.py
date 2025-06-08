@@ -8,12 +8,12 @@ class ProcessError(
     StandardBase,
     AnnualReportMixin
 ):
-    __tablename__ = "process_error"
+    __tablename__ = "process_errors"
     __table_args__ = (
         UniqueConstraint(
             "report_id",
             name="process_error_uq_report"
-        )
+        ),
     )
 
     message = Column(String)
