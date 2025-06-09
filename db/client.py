@@ -2,15 +2,18 @@ from functools import wraps
 from typing import Optional
 
 from sqlalchemy import create_engine, select, case, func, or_
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import sessionmaker, Session
 
-from config import FEDERAL_CODES, STATE_CODES, LOCAL_CODES, FEDERAL_PREFIX, STATE_PREFIX, LOCAL_PREFIX
-from db.models.pydantic.cache_entry import CacheEntry
+from config import FEDERAL_CODES, STATE_CODES, LOCAL_CODES, FEDERAL_PREFIX, STATE_PREFIX, LOCAL_PREFIX, YEARS
 from db.models.pydantic.pop_row import PopRow
-from db.models.sqlalchemy.instantiations import CodeV2, AnnualReport, ReportDetails, County, Municipality
+from db.models.sqlalchemy.instantiations import CodeV2, AnnualReport, ReportDetails, County, Municipality, ScrapeInfo, \
+    ScrapeError
 from db.queries.instantiations.add_pop_rows import AddPopRowsQueryBuilder
-from db.queries.instantiations.convert_state_to_db import ConvertStateToDBQueryBuilder
-from report_creator.data_objects import CMYBreakdownRow, AverageRow, AverageWithPopRow
+from report_creator.models.average_with_pop import AverageWithPopRow
+from report_creator.models.average import AverageRow
+from report_creator.models.cmy_breakdown import CMYBreakdownRow
+from scraper.models.name_id import NameID
 
 
 class DatabaseClient:
@@ -212,15 +215,6 @@ class DatabaseClient:
         raise NotImplementedError
 
     @session_manager
-    def convert_state_to_db(
-        self,
-        session: Session,
-        entries: list[CacheEntry]
-    ) -> None:
-        query_builder = ConvertStateToDBQueryBuilder(entries)
-        query_builder.run(session)
-
-    @session_manager
     def add_pop_rows(
         self,
         session: Session,
@@ -228,3 +222,140 @@ class DatabaseClient:
     ) -> None:
         query_builder = AddPopRowsQueryBuilder(pop_rows)
         query_builder.run(session)
+
+    @session_manager
+    def get_county_info(self, session: Session, label: str) -> NameID:
+        """
+        Get county id for county, or create county if it doesn't exist
+        :param session:
+        :param label:
+        :return:
+        """
+        query = (
+            select(County)
+            .filter(County.name == label)
+        )
+        county = session.execute(query).scalars().one_or_none()
+        if county is None:
+            county = County(name=label)
+            session.add(county)
+            session.flush()
+        return NameID(
+            id=county.id,
+            name=county.name
+        )
+
+    @session_manager
+    def get_municipality_info(
+        self,
+        session: Session,
+        county_id: int,
+        label: str
+    ) -> NameID:
+        query = (
+            select(Municipality)
+            .filter(Municipality.name == label)
+            .filter(Municipality.county_id == county_id)
+        )
+        muni = session.execute(query).scalars().one_or_none()
+        if muni is None:
+            muni = Municipality(name=label, county_id=county_id)
+            session.add(muni)
+            session.flush()
+        return NameID(
+            id=muni.id,
+            name=muni.name
+        )
+
+    @session_manager
+    def get_report_id(
+        self,
+        session: Session,
+        county_id: int,
+        muni_id: int,
+        year: int
+    ) -> NameID:
+        query = (
+            select(AnnualReport)
+            .filter(AnnualReport.county_id == county_id)
+            .filter(AnnualReport.municipality_id == muni_id)
+            .filter(AnnualReport.year == year)
+        )
+        report = session.execute(query).scalars().one_or_none()
+        if report is None:
+            report = AnnualReport(county_id=county_id, municipality_id=muni_id, year=year)
+            session.add(report)
+            session.flush()
+        return NameID(
+            id=report.id,
+            name=f"{report.county.name} {report.municipality.name} {report.year}"
+        )
+
+    @session_manager
+    def is_scraped(self, session: Session, report_id: int) -> bool:
+        query = select(
+            ScrapeInfo
+        ).where(
+            ScrapeInfo.report_id == report_id
+        )
+
+        result = session.execute(query).scalars().one_or_none()
+        return result is not None
+
+    @session_manager
+    def add_scraper_error(
+        self,
+        session: Session,
+        report_id: int,
+        error: str,
+    ):
+        scrape_info = ScrapeError(report_id=report_id, message=error)
+        try:
+            session.add(scrape_info)
+            session.flush()
+        except IntegrityError:
+            query = (
+                select(ScrapeError)
+                .filter(ScrapeError.report_id == report_id)
+            )
+            result = session.execute(query).scalars().one_or_none()
+            result.message = error
+
+    @session_manager
+    def mark_as_scraped(self, session: Session, report_id, filename: Optional[str] = None):
+        scrape_info = ScrapeInfo(
+            report_id=report_id,
+            filename=filename
+        )
+        session.add(scrape_info)
+
+    @session_manager
+    def has_timeout_error(self, session: Session, report_id):
+        query = (
+            select(ScrapeError)
+            .filter(ScrapeError.report_id == report_id)
+            .filter(ScrapeError.message.contains("Timeout"))
+        )
+        result = session.execute(query).scalars().one_or_none()
+        return result is not None
+
+    @session_manager
+    def all_years_scraped(
+        self,
+        session: Session,
+        county_id: int,
+        muni_id: int
+    ):
+        query = (
+            select(AnnualReport)
+            .where(
+                AnnualReport.county_id == county_id,
+                AnnualReport.municipality_id == muni_id,
+                ScrapeInfo.id != None
+            )
+            .outerjoin(
+                ScrapeInfo,
+            )
+        )
+        results = session.execute(query).scalars().all()
+        return len(results) == len(YEARS)

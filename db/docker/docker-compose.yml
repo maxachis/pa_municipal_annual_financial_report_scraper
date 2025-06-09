@@ -12,17 +12,5 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
 
-  pgloader:
-    image: dimitri/pgloader  # official pgloader image
-    depends_on:
-      - postgres
-    volumes:
-      - ./sqlite/data:/data  # where your SQLite db is mounted
-    entrypoint: >
-      bash -c "
-      sleep 5 &&
-      pgloader sqlite:///data/database.db postgresql://myuser:mypass@postgres/mydb
-      "
-
 volumes:
   pg_data:

@@ -5,7 +5,8 @@ as well as a main method which operates the class
 
 from openpyxl.workbook import Workbook
 
-from report_creator.data_objects import CMYBreakdownRow, AverageWithPopRow
+from report_creator.models.average_with_pop import AverageWithPopRow
+from report_creator.models.cmy_breakdown import CMYBreakdownRow
 
 
 class ReportCreator:

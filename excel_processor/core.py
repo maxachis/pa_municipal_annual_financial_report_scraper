@@ -1,0 +1,123 @@
+import re
+
+from openpyxl import Workbook
+from openpyxl.worksheet.worksheet import Worksheet
+from sqlalchemy.exc import IntegrityError
+
+from config import REPORT_RELEVANT_SHEET_NAME, REL_TOTAL_COLUMN, REL_CODE_COLUMN, REL_LABEL_COLUMN, \
+    JOINED_POP_RELEVANT_SHEET_NAME, JOINED_URBAN_RURAL_COLUMN, JOINED_GEO_COLUMN, JOINED_MUNI_COLUMN, \
+    JOINED_COUNTY_COLUMN, JOINED_CLASS_COLUMN, JOINED_POP_ESTIMATE_COLUMN, JOINED_POP_MARGIN_COLUMN
+from db.client import DatabaseClient
+from db.models.pydantic.pop_row import PopRow
+from db.models.sqlalchemy.enums import LocationType
+from db.models.sqlalchemy.instantiations import JoinedPopDetailsV2
+from excel_processor.constants import MAX_ROW, VALID_ROW_REGEX
+from excel_processor.util import open_excel_file, case_insensitive_replace
+from scraper.JsonCache import JsonCache
+from scraper.models.cmy import CMY
+from util import project_path
+
+
+class ExcelProcessor:
+    """
+    Class for processing scraped excel files and adding them to the database
+    """
+
+    def __init__(self):
+        self.database_manager = DatabaseClient()
+        self.cache = JsonCache()
+        self.cache.load_cache()
+
+    def process_downloaded_reports(self):
+        for cmy in self.cache.get_as_list_of_CMY():
+            print(f"Processing {cmy.county} {cmy.municipality} {cmy.year}")
+            try:
+                wb = self.get_downloaded_report(cmy)
+                self.process_downloaded_report(wb, cmy)
+                self.cache.mark_as_processed(cmy)
+            except Exception as e:
+                print(f"Error processing {cmy.county} {cmy.municipality} {cmy.year}: {e}")
+                self.cache.add_process_error(cmy, str(e))
+
+    def get_downloaded_report(self, cmy: CMY) -> Workbook:
+        return open_excel_file(
+            file_path=project_path(
+                "downloads",
+                f"report_{cmy.county}_{cmy.municipality}_{cmy.year}.xlsx"
+            )
+        )
+
+    def process_downloaded_report(self, wb: Workbook, cmy: CMY):
+        # Get sheet
+        ws: Worksheet = wb[REPORT_RELEVANT_SHEET_NAME]
+
+        # Iterate through rows until getting to end
+        for row in ws.iter_rows(
+                min_row=1,
+                max_row=MAX_ROW,
+                min_col=1,
+                max_col=REL_TOTAL_COLUMN,
+                values_only=True
+        ):
+            if row[0] is None:
+                continue
+            if not re.match(VALID_ROW_REGEX, row[0]):
+                continue
+            code = row[REL_CODE_COLUMN - 1]
+            label = row[REL_LABEL_COLUMN - 1]
+            total = row[REL_TOTAL_COLUMN - 1]
+            if not self.database_manager.code_label_exists(code):
+                self.database_manager.add_code_label(code, label)
+            try:
+                self.database_manager.add_to_annual_financial_report_details_table(
+                    county=cmy.county,
+                    municipality=cmy.municipality,
+                    year=cmy.year,
+                    code=code,
+                    total=total
+                )
+            except IntegrityError:
+                pass
+
+    def clean_county(self, county: str) -> str:
+        return case_insensitive_replace(county, "County", "")
+
+    def clean_municipality(self, municipality: str) -> str:
+        for term in ("Borough", "City", "Township"):
+            return case_insensitive_replace(municipality, term, "")
+
+    def process_joined_pop_class_urban_rural(self):
+        self.database_manager.wipe_table(JoinedPopDetailsV2)
+        wb = open_excel_file("Joined pop class urban rural.xlsx")
+
+
+        ws: Worksheet = wb[JOINED_POP_RELEVANT_SHEET_NAME]
+        pop_rows = []
+        for row in ws.iter_rows(min_row=2, max_row=MAX_ROW, min_col=1, max_col=8, values_only=True):
+            if row[0] is None:
+                continue
+            if row[0].strip() == "":
+                continue
+            location_type = LocationType(row[JOINED_URBAN_RURAL_COLUMN - 1])
+            if location_type == LocationType.NA:
+                continue
+
+            geo = row[JOINED_GEO_COLUMN - 1]
+            muni = row[JOINED_MUNI_COLUMN - 1]
+            # muni = self.clean_municipality(muni)
+            county = row[JOINED_COUNTY_COLUMN - 1]
+            county = self.clean_county(county)
+            class_ = row[JOINED_CLASS_COLUMN - 1]
+            pop_estimate = row[JOINED_POP_ESTIMATE_COLUMN - 1]
+            pop_margin = row[JOINED_POP_MARGIN_COLUMN - 1]
+            pop_row = PopRow(
+                geo_id=geo,
+                county=county,
+                municipality=muni,
+                class_=class_,
+                pop_estimate=pop_estimate,
+                pop_margin=pop_margin,
+                location_type=location_type
+            )
+            pop_rows.append(pop_row)
+        self.database_manager.add_pop_rows(pop_rows)

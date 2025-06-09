@@ -12,7 +12,10 @@ from playwright.async_api import async_playwright
 from JsonCache import JsonCache
 from constants import DISPLAY_REPORT_ID, YEAR_SELECT_ID, MUNI_SELECT_ID, COUNTY_SELECT_ID, BASE_URL
 from config import COUNTIES, YEARS
-from data_objects import CMY, OptionInfo
+from db.client import DatabaseClient
+from scraper.core import Scraper
+from scraper.models.cmy import CMY
+from scraper.models.option import OptionInfo
 from exceptions import NoAFRException, InvalidOptionException, EntryExistsException
 from util import project_path
 
@@ -173,6 +176,7 @@ async def muni_loop_iteration(cache: JsonCache, cmy: CMY, page, muni_option):
     if cache.all_municipalities_scraped(cmy):
         raise EntryExistsException
     muni_option_info.report()
+    # TODO: Continue here
     await select(page, MUNI_SELECT_ID, muni_option_info.value)
     await year_loop(cache, cmy, page)
 
@@ -224,7 +228,12 @@ async def year_loop(cache: JsonCache, cmy: CMY, page):
 async def main(cache: JsonCache):
     async with async_playwright() as p:
         page = await load_page(p)
-        await county_loop(cache, page)
+        scraper = Scraper(
+            db_client=DatabaseClient(),
+            page=page
+        )
+        await scraper.run()
+        # await county_loop(cache, page)
 
 if __name__ == "__main__":
     cache = JsonCache()
