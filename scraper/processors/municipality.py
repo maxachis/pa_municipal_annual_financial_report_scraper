@@ -1,12 +1,13 @@
 from playwright._impl import _errors
 from playwright.async_api import Page
 
+from config import YEARS
 from db.client import DatabaseClient
 from scraper.constants import MUNI_SELECT_ID, YEAR_SELECT_ID
 from scraper.models.name_id import NameID
 from scraper.processors.year import YearProcessor
 from scraper.exceptions import EntryExistsException, NoAFRException, InvalidOptionException
-from scraper.main import select, get_options, get_option_info
+from scraper.helpers import get_option_info, get_options, select
 from scraper.models.option import OptionInfo
 
 
@@ -40,14 +41,17 @@ class MunicipalityProcessor:
         await select(self.page, MUNI_SELECT_ID, self.municipality_option.value)
         year_options = await get_options(self.page, YEAR_SELECT_ID)
         for year_option in year_options:
-            year_processor = YearProcessor(
-                db_client=self.db_client,
-                page=self.page,
-                municipality=self.municipality,
-                county=self.county,
-                year_option=await get_option_info(year_option)
-            )
             try:
+                option_info = await get_option_info(year_option)
+                if option_info.label not in YEARS:
+                    continue
+                year_processor = YearProcessor(
+                    db_client=self.db_client,
+                    page=self.page,
+                    municipality=self.municipality,
+                    county=self.county,
+                    year_option=option_info
+                )
                 await year_processor.run()
             except (
                 EntryExistsException,

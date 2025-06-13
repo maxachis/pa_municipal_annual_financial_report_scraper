@@ -358,4 +358,4 @@ class DatabaseClient:
             )
         )
         results = session.execute(query).scalars().all()
-        return len(results) == len(YEARS)
+        return len(results) >= len(YEARS)

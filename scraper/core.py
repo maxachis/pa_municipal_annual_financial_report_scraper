@@ -1,9 +1,9 @@
 from playwright.async_api import Page
 
 from db.client import DatabaseClient
-from scraper.constants import COUNTY_SELECT_ID
+from scraper.constants import COUNTY_SELECT_ID, COUNTY_LABELS
 from scraper.exceptions import InvalidOptionException
-from scraper.main import get_option_info
+from scraper.helpers import get_option_info
 from scraper.processors.county import CountyProcessor
 
 
@@ -23,12 +23,15 @@ class Scraper:
     async def run(self):
         county_options = await self.get_options(COUNTY_SELECT_ID)
         for county_option in county_options:
-            county_processor = CountyProcessor(
-                db_client=self.db_client,
-                page=self.page,
-                county_option=await get_option_info(county_option)
-            )
             try:
+                option_info = await get_option_info(county_option)
+                if option_info.label not in COUNTY_LABELS:
+                    continue
+                county_processor = CountyProcessor(
+                    db_client=self.db_client,
+                    page=self.page,
+                    county_option=await get_option_info(county_option)
+                )
                 await county_processor.run()
             except InvalidOptionException:
                 continue

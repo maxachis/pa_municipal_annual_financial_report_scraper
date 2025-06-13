@@ -8,7 +8,7 @@ from playwright.async_api import Page
 from db.client import DatabaseClient
 from scraper.constants import DISPLAY_REPORT_ID, YEAR_SELECT_ID
 from scraper.exceptions import NoAFRException
-from scraper.main import wait, select, display_report
+from scraper.helpers import select, wait, display_report
 from scraper.models.name_id import NameID
 from scraper.models.option import OptionInfo
 from util import project_path
