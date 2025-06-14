@@ -11,7 +11,7 @@ import sqlalchemy as sa
 from alembic import op
 from sqlalchemy import UniqueConstraint, ForeignKey
 
-from db.alembic.helpers import county_id_column, municipality_id_column, standard_columns, report_id_column
+from src.db.alembic import county_id_column, municipality_id_column, standard_columns, report_id_column
 
 # revision identifiers, used by Alembic.
 revision: str = '587d9ec1a28d'

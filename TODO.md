@@ -1,10 +1,2 @@
-- [X] Create first migration script setting up new tables
-- [X] Import state data
-- [X] Create second migration script migrating data 
-- [X] Confirm migration went right, else eliminate
-- [X] Create new database method matching entries to joined pop table via fuzzy matching
-- [X] Create third migration script removing old tables
-- [X] Inspect the municipalities missing data
-- [X] Remove the offending entries from the database
-- [] Reprocess using new script based on state 
-- 
+
+- [] Once produced, compare with the existing report
