@@ -6,7 +6,7 @@ from src.db.client import DatabaseClient
 from src.scraper.constants import MUNI_SELECT_ID, YEAR_SELECT_ID
 from src.scraper.models.name_id import NameID
 from src.scraper.processors.year import YearProcessor
-from src.scraper.exceptions import EntryExistsException, NoAFRException, InvalidOptionException
+from src.scraper.exceptions import EntryExistsException, NoAFRException, InvalidOptionException, SkipEntryException
 from src.scraper.helpers import get_option_info, get_options, select
 from src.scraper.models.option import OptionInfo
 
@@ -57,6 +57,7 @@ class MunicipalityProcessor:
                 EntryExistsException,
                 NoAFRException,
                 InvalidOptionException,
-                _errors.TimeoutError
+                _errors.TimeoutError,
+                SkipEntryException
             ):
                 continue

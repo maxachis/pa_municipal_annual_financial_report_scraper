@@ -17,3 +17,9 @@ class EntryExistsException(Exception):
     Represents when an entry already exists
     """
     pass
+
+class SkipEntryException(Exception):
+    """
+    Represents when an entry should be skipped
+    """
+    pass

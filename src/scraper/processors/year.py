@@ -2,12 +2,13 @@ import asyncio
 from pathlib import Path
 
 from playwright._impl import _errors
+from playwright._impl._async_base import AsyncEventInfo
 from playwright._impl._errors import Error
-from playwright.async_api import Page
+from playwright.async_api import Page, Download
 
 from src.db.client import DatabaseClient
 from src.scraper.constants import DISPLAY_REPORT_ID, YEAR_SELECT_ID
-from src.scraper.exceptions import NoAFRException
+from src.scraper.exceptions import NoAFRException, SkipEntryException
 from src.scraper.helpers import select, wait, display_report
 from src.scraper.models.name_id import NameID
 from src.scraper.models.option import OptionInfo
@@ -70,7 +71,7 @@ class YearProcessor:
     async def wait_for_report(self):
         try:
             if self.db_client.has_timeout_error(self.report.id):
-                raise _errors.TimeoutError("Timeout while waiting for report to load")
+                raise SkipEntryException("Previously recorded timeout for entry")
             print("Waiting for report to load...")
             await self.page.wait_for_selector("#ctl00_ContentPlaceHolder1_rvReport_ctl05_ctl04_ctl00_ButtonImg")
             await wait(self.page)
@@ -86,16 +87,17 @@ class YearProcessor:
         """
         )
 
-    async def try_triggering_download(self, additional_attempts):
+    async def try_triggering_download(self, attempts: int) -> AsyncEventInfo[Download]:
         async with self.page.expect_download(timeout=60000) as download_info:
             print("Waiting for report to download...")
-            for attempts in range(additional_attempts):
+            for attempt in range(attempts):
                 try:
                     await self.trigger_download()
                     return download_info
                 except Error as e:
                     if "The report or page is being updated" in str(e):
-                        await wait(self.page)
+                        timeout = 1000 * (2 ** (attempt + 1))
+                        await wait(self.page, timeout=timeout)
                         print("Retrying...")
                     else:
                         raise

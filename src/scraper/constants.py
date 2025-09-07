@@ -11,5 +11,16 @@ COUNTY_SELECT_ID = "ContentPlaceHolder1_ddCountyId"
 BASE_URL = "https://apps.dced.pa.gov/munstats-public/ReportInformation2.aspx?report=mAfrForm"
 
 COUNTY_LABELS = [
-    "WASHINGTON"
+    "ALLEGHENY",
+    "ARMSTRONG",
+    "BEAVER",
+    "BUTLER",
+    "FAYETTE",
+    "GREENE",
+    "INDIANA",
+    "LAWRENCE",
+    "WESTMORELAND",
+    "WASHINGTON",
+    "CAMBRIA",
+    "SOMERSET"
 ]

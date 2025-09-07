@@ -27,7 +27,10 @@ class DatabaseClient:
 
     def __init__(self):
         self.engine = create_engine("postgresql://myuser:mypass@host.docker.internal/mydb")
-        self.session_maker = sessionmaker(bind=self.engine, expire_on_commit=False)
+        self.session_maker = sessionmaker(
+            bind=self.engine,
+            expire_on_commit=False
+        )
 
     @staticmethod
     def session_manager(method):
@@ -204,12 +207,9 @@ class DatabaseClient:
             session.add(scrape_info)
             session.flush()
         except IntegrityError:
-            query = (
-                select(ScrapeError)
-                .filter(ScrapeError.report_id == report_id)
-            )
-            result = session.execute(query).scalars().one_or_none()
-            result.message = error
+            # Only allow one error per report
+            return
+
 
     @session_manager
     def mark_as_scraped(self, session: Session, report_id, filename: Optional[str] = None):
@@ -225,7 +225,7 @@ class DatabaseClient:
         session.add(process_info)
 
     @session_manager
-    def has_timeout_error(self, session: Session, report_id):
+    def has_timeout_error(self, session: Session, report_id: int) -> bool:
         query = (
             select(ScrapeError)
             .filter(ScrapeError.report_id == report_id)

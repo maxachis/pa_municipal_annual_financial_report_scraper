@@ -1,7 +1,7 @@
-from typing import Optional
+from typing import Optional, Annotated
 
 from playwright._impl._errors import Error
-from playwright.async_api import async_playwright
+from playwright.async_api import async_playwright, Page
 
 from src.scraper.constants import BASE_URL, DISPLAY_REPORT_ID
 from src.scraper.exceptions import InvalidOptionException
@@ -13,24 +13,6 @@ async def trigger_download(page):
     await page.evaluate("""
         $find('ctl00_ContentPlaceHolder1_rvReport').exportReport('EXCELOPENXML');
     """)
-
-
-async def try_triggering_download(additional_attempts, page):
-    async with page.expect_download(timeout=60000) as download_info:
-        print("Waiting for report to download...")
-        for attempts in range(additional_attempts):
-            try:
-                await trigger_download(page)
-                return download_info
-            except Error as e:
-                if "The report or page is being updated" in str(e):
-                    await wait(page)
-                    print("Retrying...")
-                else:
-                    raise
-        # Try one final time, raising if it fails
-        await trigger_download(page)
-        return download_info
 
 
 async def get_option_info(
@@ -66,9 +48,12 @@ async def select(page, select_id: str, value: str, wait_after: bool = True):
         await wait(page)
 
 
-async def wait(page):
+async def wait(
+    page: Page,
+    timeout: Annotated[int, "Timeout in milliseconds (1000 = 1 second)"] = 1000
+):
     # Wait for 1 second
-    await page.wait_for_timeout(1000)
+    await page.wait_for_timeout(timeout)
 
 
 async def load_page(p: async_playwright):

@@ -1,7 +1,6 @@
-from sqlalchemy import select, cast, func, case, Float, or_, Cast, distinct
+from sqlalchemy import select, cast, func, case, Float, Cast, distinct
 from sqlalchemy.orm import Session
 
-from src.config import FEDERAL_PREFIX, STATE_CODES, STATE_PREFIX, LOCAL_PREFIX
 from src.db.models.sqlalchemy.instantiations import AnnualReport, CodeV2, ReportDetails, County, Municipality, \
     JoinedPopDetailsV2
 from src.db.queries.base import QueryBuilder

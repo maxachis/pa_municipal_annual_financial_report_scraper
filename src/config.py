@@ -41,16 +41,19 @@ COUNTIES = [
     "INDIANA",
     "LAWRENCE",
     "WESTMORELAND",
-    "WASHINGTON"
+    "WASHINGTON",
+    "CAMBRIA",
+    "SOMERSET"
 ]
 # Years to be scraped
-YEARS = ["2015", "2016", "2017", "2018", "2019"]
+YEARS = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"]
 
 """
 Code Classification
 Classifies codes according to whether they are federal, state, or local
 This is used when determining the total for each code
 """
+# TODO: The _CODES have been moved to the database. Delete them.
 FEDERAL_PREFIX = "351"
 FEDERAL_CODES = [
     '351.01',

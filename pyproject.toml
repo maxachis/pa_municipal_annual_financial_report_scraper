@@ -12,4 +12,6 @@ dependencies = [
     "alembic~=1.15.1",
     "RapidFuzz~=3.13.0",
     "psycopg2>=2.9.10",
+    "polars>=1.33.0",
+    "pandera>=0.26.1",
 ]
