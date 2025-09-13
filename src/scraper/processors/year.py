@@ -125,10 +125,10 @@ class YearProcessor:
         return await self.save_download(download)
 
     async def run(self):
-        await select(self.page, YEAR_SELECT_ID, self.year_option.value)
-        self.year_option.report()
         if self.db_client.is_scraped(self.report.id):
             return
+        await select(self.page, YEAR_SELECT_ID, self.year_option.value)
+        self.year_option.report()
         await select(self.page, YEAR_SELECT_ID, self.year_option.value, wait_after=False)
         await display_report(self.page)
         await self.wait_for_loading()

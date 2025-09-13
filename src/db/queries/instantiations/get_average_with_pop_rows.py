@@ -1,7 +1,7 @@
 from sqlalchemy import select, cast, func, case, Float, Cast, distinct
 from sqlalchemy.orm import Session
 
-from src.db.models.sqlalchemy.instantiations import AnnualReport, CodeV2, ReportDetails, County, Municipality, \
+from src.db.models.sqlalchemy.impl import AnnualReport, CodeV2, ReportDetails, County, Municipality, \
     JoinedPopDetailsV2
 from src.db.queries.base import QueryBuilder
 from src.db.queries.helpers import get_state_conditions, get_federal_conditions, get_local_conditions

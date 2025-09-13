@@ -1,12 +1,12 @@
 
 import sqlalchemy as sa
 
-def id_column():
+def id_column(autoincrement: bool = True):
     return sa.Column(
         "id",
         sa.Integer,
         primary_key=True,
-        autoincrement=True,
+        autoincrement=autoincrement,
         nullable=False
     )
 

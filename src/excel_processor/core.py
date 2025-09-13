@@ -10,7 +10,7 @@ from src.config import REPORT_RELEVANT_SHEET_NAME, REL_TOTAL_COLUMN, REL_CODE_CO
 from src.db.client import DatabaseClient
 from src.db.models.pydantic.pop_row import PopRow
 from src.db.models.sqlalchemy.enums import LocationType
-from src.db.models.sqlalchemy.instantiations import JoinedPopDetailsV2
+from src.db.models.sqlalchemy.impl import JoinedPopDetailsV2
 from src.excel_processor.constants import MAX_ROW, VALID_ROW_REGEX
 from src.excel_processor.util import open_excel_file, case_insensitive_replace
 from src.util import project_path

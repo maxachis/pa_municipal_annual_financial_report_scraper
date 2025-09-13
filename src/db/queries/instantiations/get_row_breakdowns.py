@@ -4,7 +4,7 @@ from sqlalchemy import func, case, select, or_
 from sqlalchemy.orm import Session
 
 from src.config import FEDERAL_PREFIX, STATE_CODES, STATE_PREFIX, LOCAL_PREFIX
-from src.db.models.sqlalchemy.instantiations import ReportDetails, CodeV2, County, Municipality, AnnualReport
+from src.db.models.sqlalchemy.impl import ReportDetails, CodeV2, County, Municipality, AnnualReport
 from src.db.queries.base import QueryBuilder
 from src.db.queries.helpers import get_federal_conditions, get_state_conditions, get_local_conditions
 from src.report_creator.models.cmy_breakdown import CMYBreakdownRow

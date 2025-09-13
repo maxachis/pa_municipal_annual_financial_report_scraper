@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, ForeignKey
+from sqlalchemy import Column, Integer, ForeignKey, DateTime, func
 from sqlalchemy.orm import relationship, declared_attr, Mapped
 
 
@@ -25,4 +25,13 @@ class AnnualReportMixin:
     def report(self) -> Mapped["AnnualReport"]:
         return relationship("AnnualReport")
 
+class IDMixin:
+    id = Column(Integer, primary_key=True, index=True)
 
+class CreatedAtMixin:
+    created_at = Column(
+        DateTime,
+        nullable=False,
+        default=func.now(),
+        server_default=func.now()
+    )

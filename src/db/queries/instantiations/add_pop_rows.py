@@ -3,7 +3,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from src.db.models.pydantic.pop_row import PopRow
-from src.db.models.sqlalchemy.instantiations import County, Municipality, JoinedPopDetailsV2
+from src.db.models.sqlalchemy.impl import County, Municipality, JoinedPopDetailsV2
 from src.db.queries.base import QueryBuilder
 
 

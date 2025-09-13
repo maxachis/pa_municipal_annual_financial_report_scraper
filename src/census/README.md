@@ -1,0 +1,1 @@
+This directory contains logic for pulling data from the US Government Census API and uploading it to the database.

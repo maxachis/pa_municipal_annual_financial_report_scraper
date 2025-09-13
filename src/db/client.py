@@ -7,7 +7,8 @@ from sqlalchemy.orm import sessionmaker, Session
 
 from src.config import FEDERAL_CODES, STATE_CODES, LOCAL_CODES, FEDERAL_PREFIX, STATE_PREFIX, LOCAL_PREFIX, YEARS
 from src.db.models.pydantic.pop_row import PopRow
-from src.db.models.sqlalchemy.instantiations import CodeV2, AnnualReport, ReportDetails, County, Municipality, \
+from src.db.models.sqlalchemy.base import Base
+from src.db.models.sqlalchemy.impl import CodeV2, AnnualReport, ReportDetails, County, Municipality, \
     ScrapeInfo, \
     ScrapeError, ProcessInfo, JoinedPopDetailsV2
 from src.db.queries.instantiations.add_pop_rows import AddPopRowsQueryBuilder
@@ -58,6 +59,19 @@ class DatabaseClient:
     def add_code_label(self, session: Session, code: str, label: str):
         code_label = CodeV2(code=code, label=label)
         session.add(code_label)
+
+    @session_manager
+    def add_all(
+        self,
+        session: Session,
+        models: list[Base],
+        return_ids: bool = False
+    ) -> list[int] | None:
+        session.add_all(models)
+        session.flush()
+        if return_ids:
+            return [model.id for model in models]
+        return None
 
     @session_manager
     def add_to_annual_financial_report_details_table(

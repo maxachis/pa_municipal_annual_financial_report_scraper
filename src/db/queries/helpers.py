@@ -1,7 +1,7 @@
 from sqlalchemy import or_
 
 from src.config import FEDERAL_PREFIX, STATE_CODES, STATE_PREFIX, LOCAL_PREFIX
-from src.db.models.sqlalchemy.instantiations import CodeV2
+from src.db.models.sqlalchemy.impl import CodeV2
 
 
 def get_federal_conditions():
