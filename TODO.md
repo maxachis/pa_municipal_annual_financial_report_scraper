@@ -1,7 +1,6 @@
 
-
 # Complete current dataset for 10-county region from 2015-2019
-- [ ] Add Glenfield Boro in Allegheny County's Financial Reports 
+- [X] Add Glenfield Boro in Allegheny County's Financial Reports 
 - [ ] Scrape total revenue % for each year from the annual financial reports
     - [ ] Add to Existing Tab 1) Grant $ by year & muni
         - [ ] Total Revenue
@@ -22,10 +21,10 @@
 
 # Extend Current 2015-2019 dataset to include Cambria and Somerset counties
 - [ ] Integrate into existing tabs 1-3 on current dataset
-    - [ ] To complete this, must also download and merge some additional data that lives on tabs 2 & 3 that come from sources other than the annual financial reports:
-        - [ ] Population
-        - [ ] Muni Classification
-        - [ ] Urban Rural Population
+    - [X] To complete this, must also download and merge some additional data that lives on tabs 2 & 3 that come from sources other than the annual financial reports:
+        - [X] Population
+        - [X] Muni Classification
+        - [x] Urban Rural Population
     - [ ] Use the data sources specified in the metadata tab to 
 - [ ] Check/clean data for Cambria and Somert counties
     - [ ] For munis with more than 0 but fewer than all 5 reports available, include on tab 1 but highlight these rows in a manner comparable to how they are currently formatted. 
@@ -44,9 +43,3 @@
     - [ ] Instead, create a new dataset, set up in the same way and formatted the same, but just includes the 2020-2023 data.
 - [ ] Check/clean data as needed, following same guidelines as above for munis that are missing some or all annual reports for the time frame 
 
-
-# Get Additional Data Sources
-
-- [ ] Population
-- [ ] Muni Classification
-- [ ] Urban Rural Classification
