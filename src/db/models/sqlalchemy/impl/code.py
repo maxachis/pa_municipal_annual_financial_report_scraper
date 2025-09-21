@@ -4,7 +4,7 @@ from src.db.models.sqlalchemy.base import StandardBase
 
 
 class CodeV2(StandardBase):
-    __tablename__ = 'codes_v2'
+    __tablename__ = 'codes'
     __table_args__ = (
         UniqueConstraint(
             'code',

@@ -1,22 +1,18 @@
 from functools import wraps
-from typing import Optional
+from typing import Optional, Any
 
-from sqlalchemy import create_engine, select, case, func, or_, Float, cast
+from sqlalchemy import create_engine, select, exists
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import sessionmaker, Session
 
-from src.config import FEDERAL_CODES, STATE_CODES, LOCAL_CODES, FEDERAL_PREFIX, STATE_PREFIX, LOCAL_PREFIX, YEARS
-from src.db.models.pydantic.pop_row import PopRow
+from src.config import YEARS
+from src.db.constants import DB_CONNECTION_STRING
 from src.db.models.sqlalchemy.base import Base
 from src.db.models.sqlalchemy.impl import CodeV2, AnnualReport, ReportDetails, County, Municipality, \
     ScrapeInfo, \
-    ScrapeError, ProcessInfo, JoinedPopDetailsV2
-from src.db.queries.instantiations.add_pop_rows import AddPopRowsQueryBuilder
-from src.db.queries.instantiations.get_average_with_pop_rows import GetAverageWithPopRowsQueryBuilder
-from src.db.queries.instantiations.get_row_breakdowns import GetRowBreakdownsQueryBuilder
+    ScrapeError, ProcessInfo
+from src.db.queries.base import QueryBuilder
 from src.excel_processor.models.downloaded_report import DownloadedReportMetadata
-from src.report_creator.models.average_with_pop import AverageWithPopRow
-from src.report_creator.models.cmy_breakdown import CMYBreakdownRow
 from src.scraper.models.name_id import NameID
 
 
@@ -27,7 +23,7 @@ class DatabaseClient:
     """
 
     def __init__(self):
-        self.engine = create_engine("postgresql://myuser:mypass@host.docker.internal/mydb")
+        self.engine = create_engine(DB_CONNECTION_STRING)
         self.session_maker = sessionmaker(
             bind=self.engine,
             expire_on_commit=False
@@ -49,6 +45,14 @@ class DatabaseClient:
                         raise e
 
         return wrapper
+
+    @session_manager
+    def run_query_builder(
+        self,
+        session: Session,
+        query_builder: QueryBuilder
+    ) -> Any:
+        return query_builder.run(session)
 
     @session_manager
     def code_label_exists(self, session: Session, code: str) -> bool:
@@ -99,7 +103,13 @@ class DatabaseClient:
                 ScrapeInfo.filename.label("xlsx_file")
             )
             .where(
-                ScrapeInfo.filename.is_not(None)
+                ScrapeInfo.filename.is_not(None),
+                ~exists(
+                    select(ReportDetails.id)
+                    .where(
+                        ReportDetails.report_id == ScrapeInfo.report_id
+                    )
+                )
             )
         )
 
@@ -108,27 +118,8 @@ class DatabaseClient:
         return [DownloadedReportMetadata(**result) for result in all_results]
 
     @session_manager
-    def get_row_breakdowns(self, session: Session) -> list[CMYBreakdownRow]:
-        builder = GetRowBreakdownsQueryBuilder()
-        return builder.run(session)
-
-    @session_manager
     def wipe_table(self, session: Session, model) -> None:
         session.query(model).delete()
-
-    @session_manager
-    def get_average_with_pop_rows(self, session: Session) -> list[AverageWithPopRow]:
-        builder = GetAverageWithPopRowsQueryBuilder()
-        return builder.run(session)
-
-    @session_manager
-    def add_pop_rows(
-        self,
-        session: Session,
-        pop_rows: list[PopRow]
-    ) -> None:
-        query_builder = AddPopRowsQueryBuilder(pop_rows)
-        query_builder.run(session)
 
     @session_manager
     def get_county_info(self, session: Session, label: str) -> NameID:

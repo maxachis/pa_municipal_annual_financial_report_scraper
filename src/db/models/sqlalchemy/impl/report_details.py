@@ -17,5 +17,5 @@ class ReportDetails(
         ),
     )
 
-    code_id = Column(Integer, ForeignKey("codes_v2.id"), nullable=True)
+    code_id = Column(Integer, ForeignKey("codes.id"), nullable=True)
     total = Column(Integer, nullable=True)

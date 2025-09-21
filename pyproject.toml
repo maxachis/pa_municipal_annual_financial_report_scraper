@@ -16,4 +16,10 @@ dependencies = [
     "pandera>=0.26.1",
     "aiohttp>=3.12.15",
     "environs>=14.3.0",
+    "fastexcel>=0.15.1",
+    "pyarrow>=21.0.0",
+    "connectorx>=0.4.4",
+    "xlsxwriter>=3.2.9",
+    "pandas>=2.3.2",
+    "tqdm>=4.67.1",
 ]
