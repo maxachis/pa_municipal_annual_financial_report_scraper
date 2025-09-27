@@ -1,6 +1,6 @@
 
 # Complete current dataset for 10-county region from 2015-2019
-- [X] Add Glenfield Boro in Allegheny County's Financial Reports 
+- [ ] Add Glenfield Boro in Allegheny County's Financial Reports 
 - [X] Scrape total revenue % for each year from the annual financial reports
     - [X] Add to Existing Tab 1) Grant $ by year & muni
         - [X] Total Revenue
