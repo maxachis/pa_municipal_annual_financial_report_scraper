@@ -5,6 +5,7 @@ from src.report.enums import MUNICIPALITY_CLASS_VALUES, URBAN_RURAL_VALUES
 
 
 class FiveYearTotalPerCapAndPctRevGrantByMuniSchema(DataFrameModel):
+    geo_id: Series[str] = Field(alias="GEOID")
     county: Series[str] = Field(alias="COUNTY")
     municipality: Series[str] = Field(alias="MUNICIPALITY")
     class_: Series[str] = Field(

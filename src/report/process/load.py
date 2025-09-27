@@ -20,15 +20,25 @@ def load_by_year_muni(yc: YearCond) -> DataFrame[GrantByYearAndMuniSchema]:
     return GrantByYearAndMuniSchema.validate(df)
 
 def load_by_five_year_avg(yc: YearCond) -> DataFrame[FiveYearAvgGrantByYearAndMuniSchema]:
+    having_clause = "having count(*) >= 5" if yc == YearCond.Y2015_2019 else ""
     df: pl.DataFrame = pl.read_database_uri(
-        GET_FIVE_YEAR_AVG_SCRIPT.format(year_cond=yc.value),
+        GET_FIVE_YEAR_AVG_SCRIPT.format(
+            year_cond=yc.value,
+            having_clause=having_clause
+        ),
         uri=DB_CONNECTION_STRING
     )
     return FiveYearAvgGrantByYearAndMuniSchema.validate(df)
 
 def load_by_per_capita(yc: YearCond) -> DataFrame[FiveYearTotalPerCapAndPctRevGrantByMuniSchema]:
+    having_clause: str = "having count(*) >= 5" if yc == YearCond.Y2015_2019 else ""
+    year: int = 2020 if yc == YearCond.Y2020_2023 else 2019
     df: pl.DataFrame = pl.read_database_uri(
-        GET_PER_CAPITA_SCRIPT.format(year_cond=yc.value),
+        GET_PER_CAPITA_SCRIPT.format(
+            year_cond=yc.value,
+            year=year,
+            having_clause=having_clause
+        ),
         uri=DB_CONNECTION_STRING
     )
     return FiveYearTotalPerCapAndPctRevGrantByMuniSchema.validate(df)

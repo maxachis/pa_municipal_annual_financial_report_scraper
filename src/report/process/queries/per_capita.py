@@ -10,7 +10,8 @@ with fed_five_year as (
         join annual_reports ar on ar.id = fed.report_id
         where year {year_cond}
         group by municipality_id
-    )
+        {having_clause} 
+)
 ,sta_five_year as (
         select
             ar.municipality_id,
@@ -19,6 +20,7 @@ with fed_five_year as (
              join annual_reports ar on ar.id = sta.report_id
         where year {year_cond}
         group by municipality_id
+        {having_clause}
 )
 ,loc_five_year as (
         select
@@ -28,6 +30,7 @@ with fed_five_year as (
              join annual_reports ar on ar.id = loc.report_id
         where year {year_cond}
         group by municipality_id
+        {having_clause}
 )
 , tot_rev_five_year as (
     select
@@ -73,9 +76,12 @@ select
     join municipalities m on c.id = m.county_id
     join muni_classification mc on m.id = mc.municipality_id
     join link_municipality_census lmc on lmc.municipality_id = m.id
-    join census_municipality_population cmc on cmc.geo_id = lmc.geo_id and cmc.year = 2023
+    join census_municipality_population cmc on cmc.geo_id = lmc.geo_id and cmc.year = {year}
     join fed_five_year fed on fed.municipality_id = m.id
     join sta_five_year sta on sta.municipality_id = m.id
     join loc_five_year loc on loc.municipality_id = m.id
     join tot_rev_five_year rev on rev.municipality_id = m.id
+        where not exists(select 1 \
+                     from flag_invalid_municipalities im \
+                     where im.municipality_id = m.id)
 """

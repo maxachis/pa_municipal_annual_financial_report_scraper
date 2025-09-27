@@ -10,6 +10,7 @@ with fed_five_year as (
         join annual_reports ar on ar.id = fed.report_id
         where year {year_cond}
         group by municipality_id
+        {having_clause}
     )
 ,sta_five_year as (
         select
@@ -19,6 +20,7 @@ with fed_five_year as (
              join annual_reports ar on ar.id = sta.report_id
         where year {year_cond}
         group by municipality_id
+        {having_clause}
 )
 ,loc_five_year as (
         select
@@ -28,6 +30,7 @@ with fed_five_year as (
              join annual_reports ar on ar.id = loc.report_id
         where year {year_cond}
         group by municipality_id
+        {having_clause}
 )
 
 
@@ -47,6 +50,9 @@ select
     join fed_five_year fed on fed.municipality_id = m.id
     join sta_five_year sta on sta.municipality_id = m.id
     join loc_five_year loc on loc.municipality_id = m.id
+    where not exists(select 1 \
+                     from flag_invalid_municipalities im \
+                     where im.municipality_id = m.id)
 order by c.name asc, m.name asc
 
 """

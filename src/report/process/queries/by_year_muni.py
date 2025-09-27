@@ -15,6 +15,14 @@ with
             municipalities m
             join counties c
                  on c.id = m.county_id
+        where not exists(
+            select
+                1
+            from
+                flag_invalid_municipalities im
+            where
+                im.municipality_id = m.id
+            )
         )
 select
     c.name as "County",

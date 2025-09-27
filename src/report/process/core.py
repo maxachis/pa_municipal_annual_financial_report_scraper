@@ -6,6 +6,7 @@ from src.report.models.pandera.five_year_total_per_cap_pct_rev_grant_by_muni imp
     FiveYearTotalPerCapAndPctRevGrantByMuniSchema
 from src.report.models.pandera.grant_by_year_and_muni import GrantByYearAndMuniSchema
 from src.report.sheet_manager import SheetManager
+import polars as pl
 
 
 def merge_existing_counties_by_year_muni(
@@ -15,6 +16,8 @@ def merge_existing_counties_by_year_muni(
     # Filter new_df to existing counties
     filtered_new_df: DataFrame[GrantByYearAndMuniSchema] = new_df.filter(
         new_df["County"].is_in(og_df["County"])
+        & new_df["Municipality"].is_in(og_df["Municipality"])
+        & new_df["Year"].is_in(og_df["Year"])
     )
     # Get only subset of columns from filtered_new_df
     select_new_df: DataFrame[GrantByYearAndMuniSchema] = filtered_new_df.select(
@@ -36,8 +39,10 @@ def add_new_counties_by_year_muni(
     new_df: DataFrame[GrantByYearAndMuniSchema]
 ) -> DataFrame[GrantByYearAndMuniSchema]:
     # Filter to only new counties
-    filtered_new_df: DataFrame[GrantByYearAndMuniSchema] = new_df.filter(
-        ~new_df["County"].is_in(og_df["County"])
+    filtered_new_df: DataFrame[GrantByYearAndMuniSchema] = new_df.join(
+        og_df,
+        on=["County", "Municipality", "Year"],
+        how="anti",
     )
     return GrantByYearAndMuniSchema.validate(
         GrantByYearAndMuniSchema.validate(og_df).vstack(filtered_new_df)
@@ -66,7 +71,8 @@ def merge_existing_counties_per_capita(
     # Get only subset of columns from filtered_new_df
     select_new_df: DataFrame[FiveYearTotalPerCapAndPctRevGrantByMuniSchema] = filtered_new_df.select(
         [
-            "GEOID",
+            "COUNTY",
+            "MUNICIPALITY",
             "TOTAL REVENUE 5-YEAR TOTAL",
             "% REV FED GRANTS",
             "% REV STATE GRANTS",
@@ -87,7 +93,7 @@ def merge_existing_counties_per_capita(
     # Join select_new_df with drop_og_df on County, Municipality
     joined_df: DataFrame[FiveYearTotalPerCapAndPctRevGrantByMuniSchema] = select_new_df.join(
         drop_og_df,
-        on=["GEOID"]
+        on=["COUNTY", "MUNICIPALITY"]
     )
     return FiveYearTotalPerCapAndPctRevGrantByMuniSchema.validate(joined_df)
 
@@ -115,6 +121,17 @@ def process_by_five_year_avg(
         FiveYearAvgGrantByYearAndMuniSchema.validate(og_df).vstack(new_df)
     )
 
+def apply_per_capita_spot_corrections(
+    df: DataFrame[FiveYearTotalPerCapAndPctRevGrantByMuniSchema]
+) -> DataFrame[FiveYearTotalPerCapAndPctRevGrantByMuniSchema]:
+    return df.with_columns(
+        pl.when(
+            (pl.col("COUNTY") == "WESTMORELAND") & (pl.col("MUNICIPALITY") == "MCDONALD BORO"))
+            .then(pl.lit("WASHINGTON"))
+            .otherwise(pl.col("COUNTY"))
+            .alias("COUNTY")
+    )
+
 def process_2015_2019() -> SheetManager:
     sm = SheetManager()
 
@@ -134,9 +151,10 @@ def process_2015_2019() -> SheetManager:
     # Per Capita
     per_capita_new_df: DataFrame[FiveYearTotalPerCapAndPctRevGrantByMuniSchema] = load_by_per_capita(YearCond.Y2015_2019)
     per_capita_og_df: DataFrame[FiveYearTotalPerCapAndPctRevGrantByMuniSchema] = sm.get_sheet(SheetName.TOTAL_PER_CAP_PCT_REV)
-    per_capita_og_df = merge_existing_counties_per_capita(per_capita_og_df, per_capita_new_df)
-    per_capita_og_df = add_new_counties_per_capita(per_capita_og_df, per_capita_new_df)
-    sm.set_sheet(SheetName.TOTAL_PER_CAP_PCT_REV, per_capita_og_df)
+    per_capita_og_spot_correct_df: DataFrame[FiveYearTotalPerCapAndPctRevGrantByMuniSchema] = apply_per_capita_spot_corrections(per_capita_og_df)
+    per_capita_merge_df = merge_existing_counties_per_capita(per_capita_og_spot_correct_df, per_capita_new_df)
+    per_capita_add_df = add_new_counties_per_capita(per_capita_merge_df, per_capita_new_df)
+    sm.set_sheet(SheetName.TOTAL_PER_CAP_PCT_REV, per_capita_add_df)
 
     return sm
 
